@@ -10,12 +10,12 @@
         android:id="@+id/registerContainer"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="16dp"
+        android:layout_margin="40dp"
         android:background="@drawable/rounded_white_box"
         android:clipToOutline="true"
         android:elevation="4dp"
         android:orientation="vertical"
-        android:padding="70dp"
+        android:padding="50dp"
         app:layout_constraintWidth_percent="0.9"
         app:layout_constraintHeight_percent="0.7"
         app:layout_constraintTop_toTopOf="parent"
@@ -34,7 +34,7 @@
             android:textColor="#0072CE"
             android:textSize="32sp"
             android:textStyle="bold"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="30dp"/>
 
         <EditText
             android:id="@+id/email"
@@ -46,7 +46,7 @@
             android:textColor="#000000"
             android:textColorHint="#FFAFAF"
             android:textSize="20sp"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="30dp"/>
 
         <EditText
             android:id="@+id/password"
@@ -70,7 +70,7 @@
             android:layout_radius="30dp"
             android:text="Forgot Password?"
             android:textColor="#67C1F9"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -84,20 +84,42 @@
             android:textColor="#088ADA"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginTop="40dp"/>
 
-        <TextView
-            android:id="@+id/registernow"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
-            android:layout_radius="30dp"
-            android:text="Don't have an account? Register now"
-            android:textColor="#67C1F9"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/donthaveacc"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_radius="30dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"
+                android:text="Don't have an account?"
+                android:textColor="#67C1F9"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingStart="8dp"
+                android:paddingEnd="4dp"/>
+
+            <Button
+                android:id="@+id/registernowButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:paddingStart="0dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="6dp"
+                android:text="Register now"
+                android:textColor="#67C1F9"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </LinearLayout>
 
