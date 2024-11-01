@@ -114,7 +114,7 @@
                 android:gravity="center_horizontal"
                 android:paddingStart="0dp"
                 android:paddingTop="10dp"
-                android:paddingEnd="6dp"
+                android:paddingEnd="7dp"
                 android:text="Register now"
                 android:textColor="#67C1F9"
                 android:textSize="16sp"
