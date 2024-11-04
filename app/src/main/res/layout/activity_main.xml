@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FF8AB5">
+    android:background="#F875AA">
 
     <LinearLayout
         android:id="@+id/registerContainer"
@@ -29,12 +29,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_radius="30dp"
             android:text="LOGIN"
             android:textColor="#0072CE"
             android:textSize="32sp"
             android:textStyle="bold"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="15dp"/>
 
         <EditText
             android:id="@+id/email"
@@ -46,7 +45,7 @@
             android:textColor="#000000"
             android:textColorHint="#FFAFAF"
             android:textSize="20sp"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="18dp"/>
 
         <EditText
             android:id="@+id/password"
@@ -56,7 +55,7 @@
             android:hint="Enter Password"
             android:inputType="textPassword"
             android:padding="10dp"
-            android:textColor="#00000"
+            android:textColor="#000000"
             android:textColorHint="#FFAFAF"
             android:textSize="20sp"
             android:layout_marginTop="12dp"
@@ -67,14 +66,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@id/password"
-            android:layout_radius="30dp"
             android:text="Forgot Password?"
             android:textColor="#67C1F9"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/registerButton"
+            android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/button_bluestroke"
@@ -84,7 +82,7 @@
             android:textColor="#088ADA"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_marginTop="40dp"/>
+            android:layout_marginTop="20dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -95,19 +93,19 @@
                 android:id="@+id/donthaveacc"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
-                android:layout_radius="30dp"
                 android:layout_gravity="center_vertical"
                 android:gravity="left"
                 android:text="Don't have an account?"
                 android:textColor="#67C1F9"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
-                android:paddingStart="8dp"
-                android:paddingEnd="4dp"/>
+                android:padding="2dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"/>
 
             <Button
                 android:id="@+id/registernowButton"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:background="@android:color/transparent"
@@ -117,7 +115,7 @@
                 android:paddingEnd="7dp"
                 android:text="Register now"
                 android:textColor="#67C1F9"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
