@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#FFFFFF"/>
-    <corners android:radius="10dp"/>
-    <stroke android:width="2dp" android:color="#0072CE"/> <!-- Change color for the Password EditText to #FF8AB5 -->
+    <solid android:color="#FFF6F6"/>
+    <corners android:radius="30dp"/>
+    <stroke android:width="3dp" android:color="#FFAFAF"/> <!-- Change color for the Password EditText to #FF8AB5 -->
 </shape>
