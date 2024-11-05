@@ -1,4 +1,4 @@
-package com.example.yourappname
+package com.example.projectuaslab6
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
