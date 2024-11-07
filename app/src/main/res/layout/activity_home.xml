@@ -8,10 +8,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:orientation="vertical">
 
-        <!-- Judul dan Subjudul -->
+        <!-- Title and Subtitle -->
         <TextView
             android:id="@+id/titleText"
             android:layout_width="wrap_content"
@@ -33,7 +32,7 @@
             android:textSize="16sp"
             android:textColor="#FF4081" />
 
-        <!-- Bagian Menu Horizontal -->
+        <!-- Menu Section with Uniform Size (120dp x 120dp) -->
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,29 +44,29 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <!-- Menu Item 1 hingga 5 -->
+                <!-- Menu Items -->
                 <ImageButton
                     android:id="@+id/menu1"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:src="@drawable/menu_image1"
-                    android:contentDescription="Menu 1" />
+                    android:background="@color/splash_background"
+                    android:contentDescription="Menu 1"
+                    android:src="@drawable/menu_image1" />
 
                 <ImageButton
                     android:id="@+id/menu2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:src="@drawable/menu_image2"
-                    android:contentDescription="Menu 2" />
+                    android:background="@color/splash_background"
+                    android:contentDescription="Menu 2"
+                    android:src="@drawable/menu_image2" />
 
                 <ImageButton
                     android:id="@+id/menu3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:background="?attr/selectableItemBackground"
                     android:src="@drawable/menu_image3"
@@ -75,8 +74,8 @@
 
                 <ImageButton
                     android:id="@+id/menu4"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:background="?attr/selectableItemBackground"
                     android:src="@drawable/menu_image4"
@@ -84,8 +83,8 @@
 
                 <ImageButton
                     android:id="@+id/menu5"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:background="?attr/selectableItemBackground"
                     android:src="@drawable/menu_image5"
@@ -120,40 +119,40 @@
 
                 <!-- Popular Pick Items -->
                 <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/popular_image1"
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="Popular 1" />
 
                 <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/popular_image2"
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="Popular 2" />
 
                 <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/popular_image3"
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="Popular 3" />
 
                 <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/popular_image4"
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="Popular 4" />
 
                 <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/popular_image5"
                     android:background="?attr/selectableItemBackground"
@@ -188,40 +187,40 @@
 
                 <!-- Recommended For You Items -->
                 <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/recommended_image1"
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="Recommended 1" />
 
                 <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/recommended_image2"
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="Recommended 2" />
 
                 <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/recommended_image3"
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="Recommended 3" />
 
                 <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/recommended_image4"
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="Recommended 4" />
 
                 <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/recommended_image5"
                     android:background="?attr/selectableItemBackground"
