@@ -1,234 +1,505 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFEBEE"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
 
-        android:orientation="vertical">
-
-        <!-- Judul dan Subjudul -->
-        <TextView
-            android:id="@+id/titleText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            android:text="Home"
-            android:textSize="24sp"
-            android:textColor="#000000"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/subtitleText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Hey there, ready to make something delicious?"
-            android:textSize="16sp"
-            android:textColor="#FF4081" />
-
-        <!-- Bagian Menu Horizontal -->
-        <HorizontalScrollView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:scrollbars="none">
+            android:orientation="vertical">
 
-            <LinearLayout
+            <!-- Judul dan Subjudul -->
+            <TextView
+                android:id="@+id/titleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="Hey there,"
+                android:textSize="24sp"
+                android:textColor="#FF4081"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp" />
 
-                <!-- Menu Item 1 hingga 5 -->
-                <ImageButton
-                    android:id="@+id/menu1"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:src="@drawable/menu_image1"
-                    android:contentDescription="Menu 1" />
-
-                <ImageButton
-                    android:id="@+id/menu2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:src="@drawable/menu_image2"
-                    android:contentDescription="Menu 2" />
-
-                <ImageButton
-                    android:id="@+id/menu3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:src="@drawable/menu_image3"
-                    android:contentDescription="Menu 3" />
-
-                <ImageButton
-                    android:id="@+id/menu4"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:src="@drawable/menu_image4"
-                    android:contentDescription="Menu 4" />
-
-                <ImageButton
-                    android:id="@+id/menu5"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:src="@drawable/menu_image5"
-                    android:contentDescription="Menu 5" />
-
-            </LinearLayout>
-        </HorizontalScrollView>
-
-        <!-- Section Popular Picks -->
-        <TextView
-            android:id="@+id/popularPicksTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Popular Picks"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#000000" />
-
-        <!-- Popular Picks in Horizontal Scroll -->
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:scrollbars="none">
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/subtitleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="Hey there, ready to make something delicious?"
+                android:textColor="#FF4081"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/titleText"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" />
 
-                <!-- Popular Pick Items -->
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/popular_image1"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Popular 1" />
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/popular_image2"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Popular 2" />
+            <!-- Bagian Menu Horizontal -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:scrollbars="none"
+                app:layout_constraintTop_toBottomOf="@id/subtitleText">
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/popular_image3"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Popular 3" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/popular_image4"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Popular 4" />
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/popular_image5"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Popular 5" />
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
 
-            </LinearLayout>
-        </HorizontalScrollView>
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
 
-        <!-- Section Recommended For You -->
-        <TextView
-            android:id="@+id/recommendedTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Recommended For You"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#000000" />
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
 
-        <!-- Recommended For You in Horizontal Scroll -->
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:scrollbars="none">
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
 
-            <LinearLayout
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
+
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
+
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
+
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
+
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
+
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
+
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!-- Section Popular Picks -->
+            <TextView
+                android:id="@+id/popularPicksTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="Popular Picks"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FF4081"
+                app:layout_constraintTop_toBottomOf="@id/menu5"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"/>
 
-                <!-- Recommended For You Items -->
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/recommended_image1"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Recommended 1" />
+            <!-- Popular Picks in Horizontal Scroll -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:scrollbars="none"
+                app:layout_constraintTop_toBottomOf="@id/subtitleText">
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/recommended_image2"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Recommended 2" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/recommended_image3"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Recommended 3" />
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/recommended_image4"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Recommended 4" />
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
 
-                <ImageButton
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/recommended_image5"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Recommended 5" />
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
 
-            </LinearLayout>
-        </HorizontalScrollView>
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
 
-    </LinearLayout>
-</ScrollView>
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
+
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
+
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
+
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
+
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
+
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
+
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
+
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!-- Section Recommended For You -->
+            <TextView
+                android:id="@+id/recommendedTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recommended For You"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FF4081"
+                app:layout_constraintTop_toBottomOf="@id/popular_image5"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"/>
+
+            <!-- Recommended For You in Horizontal Scroll -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:scrollbars="none"
+                app:layout_constraintTop_toBottomOf="@id/recommendedTitle">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
+
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
+
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
+
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
+
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
+
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
+
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
+
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
+
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="204dp"
+                        android:layout_marginEnd="8dp">
+
+                        <!-- Background rounded menggunakan ImageView -->
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="204dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rounded_bgmenu"
+                            android:scaleType="fitXY"/>
+
+                        <!-- ImageButton di atas background dengan gambar -->
+                        <ImageButton
+                            android:id="@+id/menu1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:src="@drawable/tesnasi"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Menu 1"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
