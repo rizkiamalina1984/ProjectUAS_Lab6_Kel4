@@ -6,6 +6,16 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recipes"
+        android:textColor="#F875AA"
+        android:textSize="24sp"
+        android:textStyle="italic|bold"
+        android:layout_marginBottom="1dp" />
+
     <!-- First Card -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,21 +85,19 @@
                     android:background="@drawable/time_button_background"
                     android:padding="4dp"
                     android:layout_marginEnd="8dp"
-                    app:drawableStartCompat="@drawable/time_icon_scaled" />
-
+                    android:drawableStart="@drawable/time_icon_scaled" />
 
                 <TextView
                     android:id="@+id/recipeLevel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Level 0"
+                    android:text="@string/level_0"
                     android:drawablePadding="4dp"
                     android:textColor="@android:color/white"
                     android:textSize="12sp"
                     android:background="@drawable/level_button_background"
                     android:padding="4dp"
                     app:drawableStartCompat="@drawable/spicy_icon_scaled" />
-
 
                 <ImageView
                     android:id="@+id/favoriteIcon"
@@ -143,7 +151,7 @@
                 android:id="@+id/recipeDescription2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Grilled skewers of fresh vegetables, seasoned with herbs and spices. Lightly charred on the outside yet tender on the inside, these kebabs are a healthy and flavorful option."
+                android:text="@string/grilled_skewers_of_fresh_vegetables_seasoned_with_herbs_and_spices_lightly_charred_on_the_outside_yet_tender_on_the_inside_these_kebabs_are_a_healthy_and_flavorful_option"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -165,29 +173,33 @@
                     android:id="@+id/recipeTime2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_time"
-                    android:drawablePadding="4dp"
                     android:text="30 min"
-                    android:textColor="@color/material_dynamic_secondary20"
-                    android:textSize="12sp" />
+                    android:drawablePadding="4dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:background="@drawable/time_button_background"
+                    android:padding="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:drawableStart="@drawable/time_icon_scaled" />
 
                 <TextView
                     android:id="@+id/recipeLevel2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:drawableLeft="@drawable/ic_level"
+                    android:text="@string/level_0"
                     android:drawablePadding="4dp"
-                    android:text="Level 1"
-                    android:textColor="@color/material_dynamic_secondary20"
-                    android:textSize="12sp" />
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:background="@drawable/level_button_background"
+                    android:padding="4dp"
+                    app:drawableStartCompat="@drawable/spicy_icon_scaled" />
 
                 <ImageView
                     android:id="@+id/favoriteIcon2"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginStart="16dp"
-                    android:contentDescription="@string/favorite_icon"
+                    android:contentDescription="@string/favorite_icon2"
                     android:src="@drawable/favorite_icon" />
 
             </LinearLayout>
@@ -213,7 +225,7 @@
             android:clipToOutline="true"
             android:contentDescription="@string/recipe_image"
             android:scaleType="centerCrop"
-            android:src="@drawable/smoothie" />
+            android:src="@drawable/smoothie_bowl" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -225,7 +237,7 @@
                 android:id="@+id/recipeTitle3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fruit Smoothie"
+                android:text="@string/smoothie_bowl"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -234,7 +246,7 @@
                 android:id="@+id/recipeDescription3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A refreshing and nutritious blend of mixed fruits. Perfect as a healthy breakfast or snack."
+                android:text="A frozen smoothie topped with fresh fruit, granola, and chia seeds, making it a refreshing and nutritious treat."
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -256,29 +268,33 @@
                     android:id="@+id/recipeTime3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_time"
-                    android:drawablePadding="4dp"
                     android:text="10 min"
-                    android:textColor="@color/material_dynamic_secondary20"
-                    android:textSize="12sp" />
+                    android:drawablePadding="4dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:background="@drawable/time_button_background"
+                    android:padding="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:drawableStart="@drawable/time_icon_scaled" />
 
                 <TextView
                     android:id="@+id/recipeLevel3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:drawableLeft="@drawable/ic_level"
+                    android:text="@string/level_0"
                     android:drawablePadding="4dp"
-                    android:text="Level 0"
-                    android:textColor="@color/material_dynamic_secondary20"
-                    android:textSize="12sp" />
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:background="@drawable/level_button_background"
+                    android:padding="4dp"
+                    app:drawableStartCompat="@drawable/spicy_icon_scaled" />
 
                 <ImageView
                     android:id="@+id/favoriteIcon3"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginStart="16dp"
-                    android:contentDescription="@string/favorite_icon"
+                    android:contentDescription="@string/favorite_icon3"
                     android:src="@drawable/favorite_icon" />
 
             </LinearLayout>
@@ -288,7 +304,7 @@
     <!-- Fourth Card -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="149dp"
         android:layout_margin="8dp"
         android:background="@drawable/rounded_card_background"
         android:elevation="4dp"
@@ -325,7 +341,7 @@
                 android:id="@+id/recipeDescription4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Golden and fluffy pancakes, perfect for a delicious breakfast or brunch."
+                android:text="@string/golden_and_fluffy_pancakes_perfect_for_a_delicious_breakfast_or_brunch"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -333,7 +349,7 @@
                 android:id="@+id/recipeReadMore4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Read More..."
+                android:text="@string/read_more2"
                 android:textColor="#FF0000"
                 android:textSize="14sp" />
 
@@ -347,29 +363,33 @@
                     android:id="@+id/recipeTime4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_time"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/time_button_background"
+                    android:drawableStart="@drawable/time_icon_scaled"
                     android:drawablePadding="4dp"
-                    android:text="15 min"
-                    android:textColor="@color/material_dynamic_secondary20"
+                    android:padding="4dp"
+                    android:text="@string/_20_min"
+                    android:textColor="@android:color/white"
                     android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/recipeLevel4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:drawableLeft="@drawable/ic_level"
+                    android:background="@drawable/level_button_background"
                     android:drawablePadding="4dp"
-                    android:text="Level 0"
-                    android:textColor="@color/material_dynamic_secondary20"
-                    android:textSize="12sp" />
+                    android:padding="4dp"
+                    android:text="@string/level_0"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/spicy_icon_scaled" />
 
                 <ImageView
                     android:id="@+id/favoriteIcon4"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginStart="16dp"
-                    android:contentDescription="@string/favorite_icon"
+                    android:contentDescription="@string/favorite_icon4"
                     android:src="@drawable/favorite_icon" />
 
             </LinearLayout>
