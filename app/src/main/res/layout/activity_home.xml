@@ -7,54 +7,64 @@
     android:background="#FFEBEE"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/topnoscroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/greeting_hey_there"
+            android:textColor="#FF4081"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/greeting_ready_to_make"
+            android:textColor="#FF4081"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topnoscroll"
+        app:layout_constraintBottom_toTopOf="@id/bottomButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/transparent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Judul dan Subjudul -->
-            <TextView
-                android:id="@+id/titleText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hey there,"
-                android:textSize="24sp"
-                android:textColor="#FF4081"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp" />
-
-            <TextView
-                android:id="@+id/subtitleText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hey there, ready to make something delicious?"
-                android:textColor="#FF4081"
-                android:textSize="16sp"
-                app:layout_constraintTop_toBottomOf="@id/titleText"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="16dp" />
-
-            <ScrollView
-                android:id="@+id/scrollView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="16dp">
-
-            <!-- Bagian Menu Horizontal -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:scrollbars="none"
-                app:layout_constraintTop_toBottomOf="@id/subtitleText">
+                app:layout_constraintTop_toBottomOf="@id/subtitleText"
+                android:background="@android:color/transparent">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -66,24 +76,125 @@
                         android:layout_height="204dp"
                         android:layout_marginEnd="8dp">
 
-                        <!-- Background rounded menggunakan ImageView -->
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
+                            android:id="@+id/gambarmenu1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:contentDescription="@string/image_view"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
                         <ImageButton
                             android:id="@+id/menu1"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
+                            android:src="@drawable/menu1"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="@string/image_button1"/>
+
+                        <TextView
+                            android:id="@+id/namamenu1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu1"
+                            android:textAlignment="center"
+                            android:paddingTop="8dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_marginTop="110dp"
+                            app:layout_constraintTop_toBottomOf="@id/menu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/descmenu1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desc1"
+                            android:textColor="#000000"
+                            android:textSize="8sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="140dp"
+                            app:layout_constraintTop_toBottomOf="@id/namamenu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/readmore1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="#FF0000"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="158dp"
+                            app:layout_constraintTop_toBottomOf="@id/descmenu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="175dp"
+                            android:gravity="center">
+
+                            <FrameLayout
+                                android:layout_width="44dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag1menu1"
+                                    android:layout_width="44dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="44dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag6"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="66dp"
+                                android:layout_height="17dp">
+
+                                <ImageView
+                                    android:id="@+id/tag2menu1"
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag2"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
+
                     </FrameLayout>
 
                     <FrameLayout
@@ -91,24 +202,125 @@
                         android:layout_height="204dp"
                         android:layout_marginEnd="8dp">
 
-                        <!-- Background rounded menggunakan ImageView -->
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
+                            android:id="@+id/gambarmenu2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:contentDescription="@string/image_view"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
                         <ImageButton
-                            android:id="@+id/menu1"
+                            android:id="@+id/menu2"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
+                            android:src="@drawable/menu2"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="@string/image_button2"/>
+
+                        <TextView
+                            android:id="@+id/namamenu2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu2"
+                            android:textAlignment="center"
+                            android:paddingTop="8dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_marginTop="110dp"
+                            app:layout_constraintTop_toBottomOf="@id/menu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/descmenu2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desc2"
+                            android:textColor="#000000"
+                            android:textSize="8sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="140dp"
+                            app:layout_constraintTop_toBottomOf="@id/namamenu2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/readmore2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="#FF0000"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="158dp"
+                            app:layout_constraintTop_toBottomOf="@id/descmenu2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="175dp"
+                            android:gravity="center">
+
+                            <FrameLayout
+                                android:layout_width="44dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag1menu2"
+                                    android:layout_width="44dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="44dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag6"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="66dp"
+                                android:layout_height="17dp">
+
+                                <ImageView
+                                    android:id="@+id/tag2menu2"
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag2"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
+
                     </FrameLayout>
 
                     <FrameLayout
@@ -116,24 +328,104 @@
                         android:layout_height="204dp"
                         android:layout_marginEnd="8dp">
 
-                        <!-- Background rounded menggunakan ImageView -->
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
+                            android:id="@+id/gambarmenu3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:contentDescription="@string/image_view"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
                         <ImageButton
-                            android:id="@+id/menu1"
+                            android:id="@+id/menu3"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
+                            android:src="@drawable/menu3"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="@string/image_button3"/>
+
+
+                        <TextView
+                            android:id="@+id/namamenu3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu3"
+                            android:textAlignment="center"
+                            android:paddingTop="8dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_marginTop="110dp"
+                            app:layout_constraintTop_toBottomOf="@id/menu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/descmenu3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desc3"
+                            android:textColor="#000000"
+                            android:textSize="8sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="140dp"
+                            app:layout_constraintTop_toBottomOf="@id/namamenu3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/readmore3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="#FF0000"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="158dp"
+                            app:layout_constraintTop_toBottomOf="@id/descmenu3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="175dp"
+                            android:gravity="center">
+
+                            <FrameLayout
+                                android:layout_width="66dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag1menu3"
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag5"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
+
                     </FrameLayout>
 
                     <FrameLayout
@@ -141,77 +433,131 @@
                         android:layout_height="204dp"
                         android:layout_marginEnd="8dp">
 
-                        <!-- Background rounded menggunakan ImageView -->
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
+                            android:id="@+id/gambarmenu4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:contentDescription="@string/image_view"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
                         <ImageButton
-                            android:id="@+id/menu1"
+                            android:id="@+id/menu4"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
+                            android:src="@drawable/menu4"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
-                    </FrameLayout>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="@string/image_button4"/>
 
-                    <FrameLayout
-                        android:layout_width="120dp"
-                        android:layout_height="204dp"
-                        android:layout_marginEnd="8dp">
+                        <TextView
+                            android:id="@+id/namamenu4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu4"
+                            android:textAlignment="center"
+                            android:paddingTop="8dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_marginTop="110dp"
+                            app:layout_constraintTop_toBottomOf="@id/menu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
 
-                        <!-- Background rounded menggunakan ImageView -->
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                        <TextView
+                            android:id="@+id/descmenu4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desc4"
+                            android:textColor="#000000"
+                            android:textSize="8sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="152dp"
+                            app:layout_constraintTop_toBottomOf="@id/namamenu4"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
-                        <ImageButton
-                            android:id="@+id/menu1"
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
-                            android:background="@null"
-                            android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
+                        <TextView
+                            android:id="@+id/readmore4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="#FF0000"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="162dp"
+                            app:layout_constraintTop_toBottomOf="@id/descmenu4"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="175dp"
+                            android:gravity="center">
+
+                            <FrameLayout
+                                android:layout_width="66dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag1menu4"
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag2"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
+
                     </FrameLayout>
 
                 </LinearLayout>
 
             </HorizontalScrollView>
 
-            <!-- Section Popular Picks -->
             <TextView
                 android:id="@+id/popularPicksTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Popular Picks"
+                android:text="@string/Popular_Picks"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#FF4081"
-                app:layout_constraintTop_toBottomOf="@id/menu5"
+                app:layout_constraintTop_toBottomOf="@id/menu1"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="10dp"/>
 
-            <!-- Popular Picks in Horizontal Scroll -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:scrollbars="none"
-                app:layout_constraintTop_toBottomOf="@id/subtitleText">
+                app:layout_constraintTop_toBottomOf="@id/subtitleText"
+                android:background="@android:color/transparent">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -223,24 +569,125 @@
                         android:layout_height="204dp"
                         android:layout_marginEnd="8dp">
 
-                        <!-- Background rounded menggunakan ImageView -->
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
+                            android:id="@+id/gambarmenu5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:contentDescription="@string/image_view"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
                         <ImageButton
-                            android:id="@+id/menu1"
+                            android:id="@+id/menu5"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
+                            android:src="@drawable/menu5"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="@string/image_button5"/>
+
+                        <TextView
+                            android:id="@+id/namamenu5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu5"
+                            android:textAlignment="center"
+                            android:paddingTop="8dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_marginTop="110dp"
+                            app:layout_constraintTop_toBottomOf="@id/menu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/descmenu5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desc5"
+                            android:textColor="#000000"
+                            android:textSize="8sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="138dp"
+                            app:layout_constraintTop_toBottomOf="@id/namamenu5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/readmore5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="#FF0000"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="156dp"
+                            app:layout_constraintTop_toBottomOf="@id/descmenu5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="175dp"
+                            android:gravity="center">
+
+                            <FrameLayout
+                                android:layout_width="44dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag1menu5"
+                                    android:layout_width="44dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="44dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag1"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="66dp"
+                                android:layout_height="17dp">
+
+                                <ImageView
+                                    android:id="@+id/tag2menu5"
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag2"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
+
                     </FrameLayout>
 
                     <FrameLayout
@@ -248,24 +695,148 @@
                         android:layout_height="204dp"
                         android:layout_marginEnd="8dp">
 
-                        <!-- Background rounded menggunakan ImageView -->
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
+                            android:id="@+id/gambarmenu6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:contentDescription="@string/image_view"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
                         <ImageButton
-                            android:id="@+id/menu1"
+                            android:id="@+id/menu6"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
+                            android:src="@drawable/menu6"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="@string/image_button6"/>
+
+                        <TextView
+                            android:id="@+id/namamenu6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu6"
+                            android:textAlignment="center"
+                            android:paddingTop="8dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:layout_marginTop="110dp"
+                            app:layout_constraintTop_toBottomOf="@id/menu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/descmenu6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desc6"
+                            android:textColor="#000000"
+                            android:textSize="8sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="150dp"
+                            app:layout_constraintTop_toBottomOf="@id/namamenu6"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/readmore6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="#FF0000"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="160dp"
+                            app:layout_constraintTop_toBottomOf="@id/descmenu6"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="175dp"
+                            android:gravity="center">
+
+                            <FrameLayout
+                                android:layout_width="33dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag1menu6"
+                                    android:layout_width="33dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="33dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag3"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="31dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag2menu6"
+                                    android:layout_width="31dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="31dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag6"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="48dp"
+                                android:layout_height="17dp">
+
+                                <ImageView
+                                    android:id="@+id/tag3menu6"
+                                    android:layout_width="48dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="48dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag2"
+                                    android:textStyle="bold"
+                                    android:textSize="8sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
+
                     </FrameLayout>
 
                     <FrameLayout
@@ -273,24 +844,148 @@
                         android:layout_height="204dp"
                         android:layout_marginEnd="8dp">
 
-                        <!-- Background rounded menggunakan ImageView -->
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
+                            android:id="@+id/gambarmenu7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:contentDescription="@string/image_view"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
                         <ImageButton
-                            android:id="@+id/menu1"
+                            android:id="@+id/menu7"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
+                            android:src="@drawable/menu7"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="@string/image_button7"/>
+
+                        <TextView
+                            android:id="@+id/namamenu7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu7"
+                            android:textAlignment="center"
+                            android:paddingTop="8dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_marginTop="110dp"
+                            app:layout_constraintTop_toBottomOf="@id/menu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/descmenu7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desc7"
+                            android:textColor="#000000"
+                            android:textSize="8sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="140dp"
+                            app:layout_constraintTop_toBottomOf="@id/namamenu7"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/readmore7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="#FF0000"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="158dp"
+                            app:layout_constraintTop_toBottomOf="@id/descmenu7"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="175dp"
+                            android:gravity="center">
+
+                            <FrameLayout
+                                android:layout_width="27dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag1menu7"
+                                    android:layout_width="27dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="27dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag1"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="31dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag2menu7"
+                                    android:layout_width="31dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="31dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag6"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="48dp"
+                                android:layout_height="17dp">
+
+                                <ImageView
+                                    android:id="@+id/tag3menu7"
+                                    android:layout_width="48dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="48dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag2"
+                                    android:textStyle="bold"
+                                    android:textSize="8sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
+
                     </FrameLayout>
 
                     <FrameLayout
@@ -298,76 +993,154 @@
                         android:layout_height="204dp"
                         android:layout_marginEnd="8dp">
 
-                        <!-- Background rounded menggunakan ImageView -->
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
+                            android:id="@+id/gambarmenu8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:contentDescription="@string/image_view"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
                         <ImageButton
-                            android:id="@+id/menu1"
+                            android:id="@+id/menu8"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
+                            android:src="@drawable/menu8"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
-                    </FrameLayout>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="@string/image_button8"/>
 
-                    <FrameLayout
-                        android:layout_width="120dp"
-                        android:layout_height="204dp"
-                        android:layout_marginEnd="8dp">
+                        <TextView
+                            android:id="@+id/namamenu8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu8"
+                            android:textAlignment="center"
+                            android:paddingTop="8dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_marginTop="110dp"
+                            app:layout_constraintTop_toBottomOf="@id/menu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
 
-                        <!-- Background rounded menggunakan ImageView -->
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                        <TextView
+                            android:id="@+id/descmenu8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desc8"
+                            android:textColor="#000000"
+                            android:textSize="8sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="140dp"
+                            app:layout_constraintTop_toBottomOf="@id/namamenu8"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
-                        <ImageButton
-                            android:id="@+id/menu1"
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
-                            android:background="@null"
-                            android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
+                        <TextView
+                            android:id="@+id/readmore8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="#FF0000"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="158dp"
+                            app:layout_constraintTop_toBottomOf="@id/descmenu8"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="175dp"
+                            android:gravity="center">
+
+                            <FrameLayout
+                                android:layout_width="31dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag1menu8"
+                                    android:layout_width="31dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="31dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag3"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="66dp"
+                                android:layout_height="17dp">
+
+                                <ImageView
+                                    android:id="@+id/tag2menu8"
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag2"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
+
                     </FrameLayout>
 
                 </LinearLayout>
 
             </HorizontalScrollView>
 
-            <!-- Section Recommended For You -->
             <TextView
-                android:id="@+id/recommendedTitle"
+                android:id="@+id/recommendedforuTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recommended For You"
+                android:text="@string/Recommended_For_U"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#FF4081"
-                app:layout_constraintTop_toBottomOf="@id/popular_image5"
+                app:layout_constraintTop_toBottomOf="@id/menu1"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"/>
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"/>
 
-            <!-- Recommended For You in Horizontal Scroll -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="20dp"
                 android:scrollbars="none"
-                app:layout_constraintTop_toBottomOf="@id/recommendedTitle">
+                app:layout_constraintTop_toBottomOf="@id/subtitleText"
+                android:background="@android:color/transparent">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -379,24 +1152,124 @@
                         android:layout_height="204dp"
                         android:layout_marginEnd="8dp">
 
-                        <!-- Background rounded menggunakan ImageView -->
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
+                            android:id="@+id/gambarmenu9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:contentDescription="@string/image_view"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
                         <ImageButton
-                            android:id="@+id/menu1"
+                            android:id="@+id/menu9"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
+                            android:src="@drawable/menu9"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="@string/image_button9"/>
+
+                        <TextView
+                            android:id="@+id/namamenu9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu9"
+                            android:textAlignment="center"
+                            android:paddingTop="8dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_marginTop="110dp"
+                            app:layout_constraintTop_toBottomOf="@id/menu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/descmenu9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desc9"
+                            android:textColor="#000000"
+                            android:textSize="8sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="140dp"
+                            app:layout_constraintTop_toBottomOf="@id/namamenu9"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/readmore9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="#FF0000"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="158dp"
+                            app:layout_constraintTop_toBottomOf="@id/descmenu9"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="175dp"
+                            android:gravity="center">
+
+                            <FrameLayout
+                                android:layout_width="44dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag1menu9"
+                                    android:layout_width="44dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="44dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag4"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="66dp"
+                                android:layout_height="17dp">
+
+                                <ImageView
+                                    android:id="@+id/tag2menu9"
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag2"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
                     </FrameLayout>
 
                     <FrameLayout
@@ -404,24 +1277,103 @@
                         android:layout_height="204dp"
                         android:layout_marginEnd="8dp">
 
-                        <!-- Background rounded menggunakan ImageView -->
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
+                            android:id="@+id/gambarmenu10"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:contentDescription="@string/image_view"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
                         <ImageButton
-                            android:id="@+id/menu1"
+                            android:id="@+id/menu10"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
+                            android:src="@drawable/menu10"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="@string/image_button10"/>
+
+                        <TextView
+                            android:id="@+id/namamenu10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu10"
+                            android:textAlignment="center"
+                            android:paddingTop="8dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_marginTop="110dp"
+                            app:layout_constraintTop_toBottomOf="@id/menu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/descmenu10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desc10"
+                            android:textColor="#000000"
+                            android:textSize="8sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="140dp"
+                            app:layout_constraintTop_toBottomOf="@id/namamenu10"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/readmore10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="#FF0000"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="158dp"
+                            app:layout_constraintTop_toBottomOf="@id/descmenu10"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="175dp"
+                            android:gravity="center">
+
+                            <FrameLayout
+                                android:layout_width="81dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag1menu10"
+                                    android:layout_width="81dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="81dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag7"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
+
                     </FrameLayout>
 
                     <FrameLayout
@@ -429,24 +1381,103 @@
                         android:layout_height="204dp"
                         android:layout_marginEnd="8dp">
 
-                        <!-- Background rounded menggunakan ImageView -->
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
+                            android:id="@+id/gambarmenu11"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:contentDescription="@string/image_view"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
                         <ImageButton
-                            android:id="@+id/menu1"
+                            android:id="@+id/menu11"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
+                            android:src="@drawable/menu11"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="@string/image_button11"/>
+
+                        <TextView
+                            android:id="@+id/namamenu11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu11"
+                            android:textAlignment="center"
+                            android:paddingTop="8dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_marginTop="110dp"
+                            app:layout_constraintTop_toBottomOf="@id/menu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/descmenu11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desc11"
+                            android:textColor="#000000"
+                            android:textSize="8sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="150dp"
+                            app:layout_constraintTop_toBottomOf="@id/namamenu11"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/readmore11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="#FF0000"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="160dp"
+                            app:layout_constraintTop_toBottomOf="@id/descmenu11"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="175dp"
+                            android:gravity="center">
+
+                            <FrameLayout
+                                android:layout_width="66dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag1menu11"
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag2"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
+
                     </FrameLayout>
 
                     <FrameLayout
@@ -454,52 +1485,152 @@
                         android:layout_height="204dp"
                         android:layout_marginEnd="8dp">
 
-                        <!-- Background rounded menggunakan ImageView -->
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
+                            android:id="@+id/gambarmenu12"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:contentDescription="@string/image_view"/>
 
-                        <!-- ImageButton di atas background dengan gambar -->
                         <ImageButton
-                            android:id="@+id/menu1"
+                            android:id="@+id/menu12"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
+                            android:src="@drawable/menu12"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="@string/image_button12"/>
+
+                        <TextView
+                            android:id="@+id/namamenu12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu12"
+                            android:textAlignment="center"
+                            android:paddingTop="8dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_marginTop="110dp"
+                            app:layout_constraintTop_toBottomOf="@id/menu1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/descmenu12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desc12"
+                            android:textColor="#000000"
+                            android:textSize="8sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="152dp"
+                            app:layout_constraintTop_toBottomOf="@id/namamenu12"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/readmore12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/read_more"
+                            android:textColor="#FF0000"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="162dp"
+                            app:layout_constraintTop_toBottomOf="@id/descmenu12"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="175dp"
+                            android:gravity="center">
+
+                            <FrameLayout
+                                android:layout_width="66dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="2dp">
+
+                                <ImageView
+                                    android:id="@+id/tag1menu12"
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:src="@drawable/rounded_minired"
+                                    android:contentDescription="@string/image_view_pink"/>
+
+                                <TextView
+                                    android:layout_width="66dp"
+                                    android:layout_height="17dp"
+                                    android:text="@string/tag5"
+                                    android:textStyle="bold"
+                                    android:textSize="10sp"
+                                    android:textAlignment="center"
+                                    android:textColor="#FFFFFF"
+                                    android:gravity="center"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
                     </FrameLayout>
 
-                    <FrameLayout
-                        android:layout_width="120dp"
-                        android:layout_height="204dp"
-                        android:layout_marginEnd="8dp">
-
-                        <!-- Background rounded menggunakan ImageView -->
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="204dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/rounded_bgmenu"
-                            android:scaleType="fitXY"/>
-
-                        <!-- ImageButton di atas background dengan gambar -->
-                        <ImageButton
-                            android:id="@+id/menu1"
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:layout_gravity="top|center_horizontal"
-                            android:src="@drawable/tesnasi"
-                            android:background="@null"
-                            android:scaleType="centerInside"
-                            android:contentDescription="Menu 1"/>
-                    </FrameLayout>
                 </LinearLayout>
+
             </HorizontalScrollView>
+
         </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/buttonmenu"
+            android:layout_width="126dp"
+            android:layout_height="110dp"
+            android:src="@drawable/menu"
+            android:background="@drawable/button_3tap"
+            android:scaleType="centerInside"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="3dp"
+            android:contentDescription="@string/image_button_recipes"/>
+
+        <ImageButton
+            android:id="@+id/buttonsearch"
+            android:layout_width="126dp"
+            android:layout_height="110dp"
+            android:src="@drawable/search"
+            android:background="@drawable/button_3tap"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="3dp"
+            android:contentDescription="@string/image_button_search"/>
+
+        <ImageButton
+            android:id="@+id/buttonfav"
+            android:layout_width="126dp"
+            android:layout_height="110dp"
+            android:src="@drawable/fav"
+            android:background="@drawable/button_3tap"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/image_button_fav"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
