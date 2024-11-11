@@ -11,4 +11,12 @@
     <string name="level_0">Level 0</string>
     <string name="smoothie_bowl">Smoothie Bowl</string>
     <string name="pasta_salad">Pasta Salad</string>
+    <string name="search">Search</string>
+    <string name="rice">Rice</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="bread">Bread</string>
+    <string name="soup">Soup</string>
+    <string name="salad">Salad</string>
+    <string name="meat">Meat</string>
+    <string name="griddle_cakes">Griddle Cakes</string>
 </resources>
