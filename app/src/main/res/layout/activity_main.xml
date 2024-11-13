@@ -94,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_gravity="center_vertical"
-                android:gravity="left"
+                android:gravity="start"
                 android:text="Don't have an account?"
                 android:textColor="#67C1F9"
                 android:textSize="13sp"
