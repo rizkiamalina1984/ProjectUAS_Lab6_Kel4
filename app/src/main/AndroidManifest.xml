@@ -25,6 +25,9 @@
             android:name=".RecipesActivity"
             android:exported="false" />
         <activity
+            android:name=".Favorite_Recipes"
+            android:exported="false" />
+        <activity
             android:name=".LogoOpenApp"
             android:exported="false" />
         <activity
