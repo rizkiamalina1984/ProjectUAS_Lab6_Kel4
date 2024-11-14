@@ -21,7 +21,6 @@
     <string name="tag5">Salad</string>
     <string name="tag6">Meat</string>
     <string name="tag7">Griddle Cakes</string>
-    <string name="read_more">Read more</string>
     <string name="image_button1">Image Tombol Menu 1</string>
     <string name="image_button2">Image Tombol Menu 2</string>
     <string name="image_button3">Image Tombol Menu 3</string>
@@ -54,4 +53,23 @@
     <string name="Popular_Picks">Popular Picks</string>
     <string name="Recommended_For_U">Recommended For You</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_20_min">20 min</string>
+    <string name="read_more">Read More...</string>
+    <string name="a_delightful_blend_of_cooked_pasta_tossed_with_fresh_vegetables_and_diced_meat_creating_a_colorful_and_satisfying_dish_perfect_for_a_light_meal_or_side">A delightful blend of cooked pasta tossed with fresh vegetables and diced meat, creating a colorful and satisfying dish perfect for a light meal or side.</string>
+    <string name="recipe_image">Recipes\n</string>
+    <string name="a_refreshing_and_nutritious_blend_of_mixed_fruits_perfect_as_a_healthy_breakfast_or_snack">A refreshing and nutritious blend of mixed fruits. Perfect as a healthy breakfast or snack.</string>
+    <string name="grilled_skewers_of_fresh_vegetables_seasoned_with_herbs_and_spices_lightly_charred_on_the_outside_yet_tender_on_the_inside_these_kebabs_are_a_healthy_and_flavorful_option">Grilled skewers of fresh vegetables, seasoned with herbs and spices. Lightly charred on the outside yet tender on the inside, these kebabs are a healthy and flavorful option.</string>
+    <string name="golden_and_fluffy_pancakes_perfect_for_a_delicious_breakfast_or_brunch">Golden and fluffy pancakes, perfect for a delicious breakfast or brunch.</string>
+    <string name="read_more2">Read More...</string>
+    <string name="level_0">Level 0</string>
+    <string name="smoothie_bowl">Smoothie Bowl</string>
+    <string name="pasta_salad">Pasta Salad</string>
+    <string name="search">Search</string>
+    <string name="rice">Rice</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="bread">Bread</string>
+    <string name="soup">Soup</string>
+    <string name="salad">Salad</string>
+    <string name="meat">Meat</string>
+    <string name="griddle_cakes">Griddle Cakes</string>
 </resources>

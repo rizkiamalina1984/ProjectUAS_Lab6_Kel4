@@ -1,0 +1,13 @@
+<!-- res/drawable/search_bar_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White background color inside -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Pink border -->
+    <stroke
+        android:width="4dp"
+        android:color="#FF007F" /> <!-- Adjust to the desired shade of pink -->
+
+    <!-- Rounded corners -->
+    <corners android:radius="30dp" /> <!-- Adjust to get the rounded effect you want -->
+</shape>
