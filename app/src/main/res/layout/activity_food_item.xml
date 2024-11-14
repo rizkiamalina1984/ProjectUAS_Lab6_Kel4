@@ -16,7 +16,7 @@
             android:id="@+id/foodName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Food Name"
+            android:text="@string/food_name"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@android:color/black" />
@@ -25,7 +25,7 @@
             android:id="@+id/foodDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Food description goes here."
+            android:text="@string/food_description_goes_here"
             android:textSize="14sp"
             android:textColor="@android:color/darker_gray"
             android:layout_marginTop="4dp" />
@@ -34,7 +34,7 @@
             android:id="@+id/foodTags"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tag1 | Tag2 | Tag3"
+            android:text="@string/tag1_tag2_tag3"
             android:textSize="12sp"
             android:textColor="@android:color/holo_red_light"
             android:layout_marginTop="4dp" />

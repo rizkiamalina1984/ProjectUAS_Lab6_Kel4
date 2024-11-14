@@ -159,7 +159,7 @@
                 android:id="@+id/recipeTitle2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vegetable Kebab"
+                android:text="@string/vegetable_kebab"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -190,7 +190,7 @@
                     android:id="@+id/recipeTime2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="30 min"
+                    android:text="@string/_30_min"
                     android:drawablePadding="4dp"
                     android:textColor="@android:color/white"
                     android:textSize="12sp"
@@ -263,7 +263,7 @@
                 android:id="@+id/recipeDescription3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A frozen smoothie topped with fresh fruit, granola, and chia seeds, making it a refreshing and nutritious treat."
+                android:text="@string/a_frozen_smoothie_topped_with_fresh_fruit_granola_and_chia_seeds_making_it_a_refreshing_and_nutritious_treat"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -285,7 +285,7 @@
                     android:id="@+id/recipeTime3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="10 min"
+                    android:text="@string/_10_min"
                     android:drawablePadding="4dp"
                     android:textColor="@android:color/white"
                     android:textSize="12sp"
