@@ -72,4 +72,12 @@
     <string name="salad">Salad</string>
     <string name="meat">Meat</string>
     <string name="griddle_cakes">Griddle Cakes</string>
+    <string name="vegetables2">Vegetables</string>
+    <string name="vegetable_kebab">Vegetable Kebab</string>
+    <string name="_30_min">30 min</string>
+    <string name="a_frozen_smoothie_topped_with_fresh_fruit_granola_and_chia_seeds_making_it_a_refreshing_and_nutritious_treat">A frozen smoothie topped with fresh fruit, granola, and chia seeds, making it a refreshing and nutritious treat.</string>
+    <string name="_10_min">10 min</string>
+    <string name="food_name">Food Name</string>
+    <string name="food_description_goes_here">Food description goes here.</string>
+    <string name="tag1_tag2_tag3">Tag1 | Tag2 | Tag3</string>
 </resources>
