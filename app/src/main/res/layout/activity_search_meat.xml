@@ -1,0 +1,492 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F875AA">
+
+    <!-- Search Bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:hint="@string/meat"
+            android:textStyle="bold"
+            android:background="@drawable/search_bar_background"
+            android:padding="14dp"
+            android:textColor="#F875AA"
+            android:textColorHint="#FF007F"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ScrollView mulai dari First Card -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/search_container"
+        app:layout_constraintBottom_toTopOf="@id/bottomButtons">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <!-- First Card (Pasta Salad) -->
+            <LinearLayout
+                android:id="@+id/cardPastaSalad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/rounded_card_background"
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp">
+
+                <ImageView
+                    android:id="@+id/recipeImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_image_mask"
+                    android:clipToOutline="true"
+                    android:contentDescription="@string/recipe_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pasta_salad" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/recipeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pasta_salad"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/recipeDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/a_delightful_blend_of_cooked_pasta_tossed_with_fresh_vegetables_and_diced_meat_creating_a_colorful_and_satisfying_dish_perfect_for_a_light_meal_or_side"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/recipeReadMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/read_more"
+                        android:textColor="#FF0000"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/recipeTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_20_min"
+                            android:drawablePadding="4dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:background="@drawable/time_button_background"
+                            android:padding="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:drawableStart="@drawable/time_icon_scaled" />
+
+                        <TextView
+                            android:id="@+id/recipeLevel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/level_0"
+                            android:drawablePadding="4dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:background="@drawable/level_button_background"
+                            android:padding="4dp"
+                            app:drawableStartCompat="@drawable/spicy_icon_scaled" />
+
+                        <ImageView
+                            android:id="@+id/favoriteIcon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="16dp"
+                            android:contentDescription="@string/favorite_icon"
+                            android:src="@drawable/favorite_icon" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Second Card -->
+            <LinearLayout
+                android:id="@+id/cardVegetableKebab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/rounded_card_background"
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cardPastaSalad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/recipeImage2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_image_mask"
+                    android:clipToOutline="true"
+                    android:contentDescription="@string/recipe_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/vegetable_kebab" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/recipeTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vegetable_kebab"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/recipeDescription2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/grilled_skewers_of_fresh_vegetables_seasoned_with_herbs_and_spices_lightly_charred_on_the_outside_yet_tender_on_the_inside_these_kebabs_are_a_healthy_and_flavorful_option"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/recipeReadMore2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Read More..."
+                        android:textColor="#FF0000"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/recipeTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_30_min"
+                            android:drawablePadding="4dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:background="@drawable/time_button_background"
+                            android:padding="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:drawableStart="@drawable/time_icon_scaled" />
+
+                        <TextView
+                            android:id="@+id/recipeLevel2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/level_0"
+                            android:drawablePadding="4dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            android:background="@drawable/level_button_background"
+                            android:padding="4dp"
+                            app:drawableStartCompat="@drawable/spicy_icon_scaled" />
+
+                        <ImageView
+                            android:id="@+id/favoriteIcon2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="16dp"
+                            android:contentDescription="@string/favorite_icon2"
+                            android:src="@drawable/favorite_icon" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Third Card -->
+            <LinearLayout
+                android:id="@+id/cardStirFriedBroccoli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/rounded_card_background"
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cardVegetableKebab"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/recipeImage6"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_image_mask"
+                    android:clipToOutline="true"
+                    android:contentDescription="@string/recipe_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/grilled_chick" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/recipeTitle6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grilled Chicken Sandwich"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/recipeDescription6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grilled chicken served on toasted
+buns with lettuce, tomato, and a hint
+of mayo."
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/recipeReadMore6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/read_more"
+                        android:textColor="#FF0000"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/recipeTime6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/time_button_background"
+                            android:drawableStart="@drawable/time_icon_scaled"
+                            android:drawablePadding="4dp"
+                            android:padding="4dp"
+                            android:text="@string/_20_min"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/recipeLevel6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/level_button_background"
+                            android:drawablePadding="4dp"
+                            android:padding="4dp"
+                            android:text="@string/level_0"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/spicy_icon_scaled" />
+
+                        <ImageView
+                            android:id="@+id/favoriteIcon6"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="16dp"
+                            android:contentDescription="@string/favorite_icon"
+                            android:src="@drawable/favorite_icon" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Fourth Card -->
+            <LinearLayout
+                android:id="@+id/cardFourth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/rounded_card_background"
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cardStirFriedBroccoli"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/recipeImage7"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_image_mask"
+                    android:clipToOutline="true"
+                    android:contentDescription="@string/recipe_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/onigiri" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/recipeTitle7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rice Balls (Onigiri)"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/recipeDescription7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rice balls shaped into spheres or
+triangles, stuffed with tuna or
+vegetables."
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/recipeReadMore7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/read_more2"
+                        android:textColor="#FF0000"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/recipeTime6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/time_button_background"
+                            android:drawableStart="@drawable/time_icon_scaled"
+                            android:drawablePadding="4dp"
+                            android:padding="4dp"
+                            android:text="@string/_20_min"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/recipeLevel6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/level_button_background"
+                            android:drawablePadding="4dp"
+                            android:padding="4dp"
+                            android:text="@string/level_0"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            app:drawableStartCompat="@drawable/spicy_icon_scaled" />
+
+                        <ImageView
+                            android:id="@+id/favoriteIcon6"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="16dp"
+                            android:contentDescription="@string/favorite_icon4"
+                            android:src="@drawable/favorite_icon" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFEBEE"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/buttonmenu"
+            android:layout_width="126dp"
+            android:layout_height="110dp"
+            android:src="@drawable/menu"
+            android:background="@drawable/button_3tap"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="8dp"/>
+
+        <ImageButton
+            android:id="@+id/buttonsearch"
+            android:layout_width="126dp"
+            android:layout_height="110dp"
+            android:src="@drawable/search"
+            android:background="@drawable/button_3tap"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="8dp"/>
+
+        <ImageButton
+            android:id="@+id/buttonfav"
+            android:layout_width="126dp"
+            android:layout_height="110dp"
+            android:src="@drawable/fav"
+            android:background="@drawable/button_3tap"
+            android:scaleType="centerInside"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

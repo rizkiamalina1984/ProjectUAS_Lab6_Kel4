@@ -16,7 +16,7 @@
             android:id="@+id/foodName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Food  bbb hapus nnt Name"
+            android:text="Food Name"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@android:color/black" />
