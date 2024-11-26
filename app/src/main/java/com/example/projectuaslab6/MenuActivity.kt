@@ -1,70 +1,105 @@
-package com.example.mealgo
+package com.example.tesfirestoremenu
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.bumptech.glide.Glide
+import com.example.projectuaslab6.R
+import com.google.firebase.auth.FirebaseAuth
 
-class MenuActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
-    private lateinit var firestore: FirebaseFirestore
-    private lateinit var menuTitle: TextView
-    private lateinit var description: TextView
-    private lateinit var ingredients: LinearLayout
-    private lateinit var instructions: TextView
-    private lateinit var menuImage: ImageView
+    private lateinit var imageView: ImageView
+    private lateinit var storageRef: StorageReference
+    private lateinit var db: FirebaseFirestore
+    private val PICK_IMAGE_REQUEST = 71
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu)
+        setContentView(R.layout.activity_main)
 
-        // Inisialisasi Firebase Firestore
-        firestore = FirebaseFirestore.getInstance()
+        // Inisialisasi Firebase
+        imageView = findViewById(R.id.menu_image)
+        storageRef = FirebaseStorage.getInstance().reference
+        db = FirebaseFirestore.getInstance()
 
-        // Inisialisasi Views
-        menuTitle = findViewById(R.id.menuTitle)
-        description = findViewById(R.id.description)
-        ingredients = findViewById(R.id.ingredients)
-        instructions = findViewById(R.id.instructions)
-        menuImage = findViewById(R.id.menu_image)
+        // Tombol untuk memilih gambar
+        val selectImageButton = findViewById<ImageView>(R.id.left_arrow)
+        selectImageButton.setOnClickListener {
+            openGallery()
+        }
+    }
 
-        // Ambil ID menu dari Intent atau parameter lain
-        val menuId = intent.getStringExtra("MENU_ID") ?: return
+    // Fungsi untuk memilih gambar dari galeri
+    private fun openGallery() {
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        startActivityForResult(intent, PICK_IMAGE_REQUEST)
+    }
 
-        // Ambil data dari Firestore
-        firestore.collection("menus").document(menuId)
-            .get()
-            .addOnSuccessListener { document ->
-                if (document != null) {
-                    val menuData = document.toObject(Menu::class.java)
+    // Mengambil hasil gambar yang dipilih
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
-                    // Set data ke UI
-                    menuTitle.text = menuData?.name
-                    description.text = menuData?.description
-                    instructions.text = menuData?.instructions
-                    // Set image
-                    Glide.with(this).load(menuData?.imageUrl).into(menuImage)
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
+            val imageUri: Uri? = data.data
+            imageUri?.let { uploadImage(it) }
+        }
+    }
 
-                    // Menampilkan bahan-bahan
-                    menuData?.ingredients?.forEach { ingredient ->
-                        val ingredientView = LayoutInflater.from(this)
-                            .inflate(R.layout.ingredient_item, ingredients, false)
-                        val ingredientImage = ingredientView.findViewById<ImageView>(R.id.ingredientImage)
-                        val ingredientText = ingredientView.findViewById<TextView>(R.id.ingredientText)
+    // Fungsi untuk mengupload gambar ke Firebase Storage
+    private fun uploadImage(imageUri: Uri) {
+        val imageRef = storageRef.child("images/${imageUri.lastPathSegment}")
 
-                        Glide.with(this).load(ingredient.imageUrl).into(ingredientImage)
-                        ingredientText.text = ingredient.name
-                        ingredients.addView(ingredientView)
-                    }
+        imageRef.putFile(imageUri)
+            .addOnSuccessListener {
+                imageRef.downloadUrl.addOnSuccessListener { uri ->
+                    val imageUrl = uri.toString()
+                    saveImageUrlToFirestore(imageUrl)
+                    Toast.makeText(this, "Upload Berhasil!", Toast.LENGTH_SHORT).show()
                 }
             }
-            .addOnFailureListener {
-                // Handle error
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Upload Gagal: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    // Menyimpan URL gambar ke Firestore
+    private fun saveImageUrlToFirestore(imageUrl: String) {
+        val menuData = hashMapOf(
+            "imageUrl" to imageUrl
+        )
+
+        db.collection("menus")
+            .document("menu1")
+            .set(menuData)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Data Tersimpan!", Toast.LENGTH_SHORT).show()
+                loadImageFromFirestore()
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Gagal menyimpan data: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    // Mengambil URL gambar dari Firestore dan menampilkannya
+    private fun loadImageFromFirestore() {
+        db.collection("menus")
+            .document("menu1")
+            .get()
+            .addOnSuccessListener { document ->
+                val imageUrl = document.getString("imageUrl")
+                if (imageUrl != null) {
+                    Glide.with(this)
+                        .load(imageUrl)
+                        .into(imageView)
+                }
             }
     }
 }
