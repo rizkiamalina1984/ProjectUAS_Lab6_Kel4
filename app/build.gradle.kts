@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.projectuaslab6"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.projectuaslab6"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -46,6 +46,9 @@ dependencies {
     implementation(libs.firebase.firestore.ktx)
     implementation(libs.firebase.storage.ktx)
     implementation(libs.firebase.auth.ktx)
+    implementation("com.google.firebase:firebase-storage:20.1.0")
+    implementation("com.google.firebase:firebase-firestore:24.4.0")
+    implementation("com.github.bumptech.glide:glide:4.13.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

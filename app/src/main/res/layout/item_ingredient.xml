@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- Item 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- ImageView untuk Bahan 1 -->
+        <ImageView
+            android:id="@+id/ingredientImage1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ingredient1_menu_1"
+            android:contentDescription="Ingredient Image" />
+
+        <!-- TextView untuk Nama Bahan 1 -->
+        <TextView
+            android:id="@+id/ingredientText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Frozen_Bananas"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Item 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- ImageView untuk Bahan 2 -->
+        <ImageView
+            android:id="@+id/ingredientImage2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ingredient2_menu_1"
+            android:contentDescription="Ingredient Image" />
+
+        <!-- TextView untuk Nama Bahan 2 -->
+        <TextView
+            android:id="@+id/ingredientText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Frozen_Berries"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Item 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- ImageView untuk Bahan 3 -->
+        <ImageView
+            android:id="@+id/ingredientImage3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ingredient3_menu_1"
+            android:contentDescription="Ingredient Image" />
+
+        <!-- TextView untuk Nama Bahan 3 -->
+        <TextView
+            android:id="@+id/ingredientText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Greek_Yogurt"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Item 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- ImageView untuk Bahan 3 -->
+        <ImageView
+            android:id="@+id/ingredientImage4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ingredient4_menu_1"
+            android:contentDescription="Ingredient Image" />
+
+        <!-- TextView untuk Nama Bahan 3 -->
+        <TextView
+            android:id="@+id/ingredientText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Almond_Milk"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Item 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- ImageView untuk Bahan 3 -->
+        <ImageView
+            android:id="@+id/ingredientImage5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ingredient5_menu_1"
+            android:contentDescription="Ingredient Image" />
+
+        <!-- TextView untuk Nama Bahan 3 -->
+        <TextView
+            android:id="@+id/ingredientText5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Granola"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Item 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- ImageView untuk Bahan 3 -->
+        <ImageView
+            android:id="@+id/ingredientImage6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ingredient6_menu_1"
+            android:contentDescription="Ingredient Image" />
+
+        <!-- TextView untuk Nama Bahan 3 -->
+        <TextView
+            android:id="@+id/ingredientText6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Fresh_Fruits"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Item 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- ImageView untuk Bahan 3 -->
+        <ImageView
+            android:id="@+id/ingredientImage7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ingredient7_menu_1"
+            android:contentDescription="Ingredient Image" />
+
+        <!-- TextView untuk Nama Bahan 3 -->
+        <TextView
+            android:id="@+id/ingredientText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Chia_Seeds"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Tambahkan Item 4 hingga Item 7 dengan struktur yang sama seperti di atas -->
+
+</LinearLayout>

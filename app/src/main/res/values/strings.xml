@@ -27,4 +27,16 @@
     <string name="food_name">Food Name</string>
     <string name="food_description_goes_here">Food description goes here.</string>
     <string name="tag1_tag2_tag3">Tag1 | Tag2 | Tag3</string>
+    <string name="left_arrow">left arrow</string>
+    <string name="Menu_Story">menu_story</string>
+    <string name="Ingredients_List">ingredients_list</string>
+    <string name="Instructions">instructions</string>
+
+    <string name="Frozen_Bananas">Frozen Bananas (solid) - 2 medium-sized</string>
+    <string name="Frozen_Berries">Frozen Berries (solid) - 1 cup (e.g., strawberries, blueberries, or raspberries)</string>
+    <string name="Greek_Yogurt">Greek Yogurt (dairy, thick) - 1/2 cup</string>
+    <string name="Almond_Milk">Almond Milk (liquid) - 1/2 cup (or any milk of choice)</string>
+    <string name="Granola">Granola (dry, crunchy) - 1/4 cup (for topping)</string>
+    <string name="Fresh_Fruits">Fresh Fruits (solid) - 1/2 cup, sliced (e.g., kiwi, banana, or berries, for topping)</string>
+    <string name="Chia_Seeds">Chia Seeds (dry, small) - 1 tablespoon(optional, for topping)</string>
 </resources>

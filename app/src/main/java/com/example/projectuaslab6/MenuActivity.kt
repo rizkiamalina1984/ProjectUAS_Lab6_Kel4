@@ -10,10 +10,9 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.bumptech.glide.Glide
-import com.example.projectuaslab6.R
 import com.google.firebase.auth.FirebaseAuth
 
-class MainActivity : AppCompatActivity() {
+class MenuActivity : AppCompatActivity() {
 
     private lateinit var imageView: ImageView
     private lateinit var storageRef: StorageReference
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
 
         // Tombol untuk memilih gambar
-        val selectImageButton = findViewById<ImageView>(R.id.left_arrow)
+        val selectImageButton = findViewById<ImageView>(R.id.left_arrow) // contoh
         selectImageButton.setOnClickListener {
             openGallery()
         }
