@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "784347257924",
+    "project_id": "register-login-27f8e",
+    "storage_bucket": "register-login-27f8e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784347257924:android:39bd8aed3dc52803bc7011",
+        "android_client_info": {
+          "package_name": "com.example.projectuaslab6"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvBgCYbaw02JkNB7NV4kWY1x1pIDurYqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

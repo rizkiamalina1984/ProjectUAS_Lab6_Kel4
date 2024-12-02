@@ -1,6 +1,7 @@
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projectuaslab6.R
 import com.example.tes.R
 import com.example.projectuaslab6.Recipe
 import com.example.projectuaslab6.RecipeAdapter
