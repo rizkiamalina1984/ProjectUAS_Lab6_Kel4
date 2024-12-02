@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
     <color name="splash_background">#F20C69</color>
 
-    <color name="colorPrimary">#6200EE</color> <!-- Warna utama (misal ungu) -->
-    <color name="colorPrimaryDark">#3700B3</color> <!-- Warna utama gelap -->
-    <color name="colorAccent">#03DAC5</color> <!-- Warna aksen -->
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
     <color name="c_f20c69">#F20C69</color>
+
+    <color name="c_f875aa">#F875AA</color>
+    <color name="c_000000">#000000</color>
+    <color name="c_67c1f9">#67C1F9</color>
+    <color name="c_ff5252">#FF5252</color>
+    <color name="c_0876ba">#0876BA</color>
+    <color name="c_075d92">#075D92</color>
     <color name="c_fff6f6">#FFF6F6</color>
+    <color name="c_ff0000">#FF0000</color>
+    <color name="c_ffffff">#FFFFFF</color>
 </resources>

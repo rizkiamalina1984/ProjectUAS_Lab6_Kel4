@@ -21,7 +21,6 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/rounded_image_mask"
             android:clipToOutline="true"
             android:contentDescription="@string/recipe_image"
             android:scaleType="centerCrop"
@@ -118,11 +117,10 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/rounded_image_mask"
             android:clipToOutline="true"
             android:contentDescription="@string/recipe_image"
             android:scaleType="centerCrop"
-            android:src="@drawable/vegetable_kebab" />
+            android:src="@drawable/menu2" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -209,7 +207,6 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/rounded_image_mask"
             android:clipToOutline="true"
             android:contentDescription="@string/recipe_image"
             android:scaleType="centerCrop"
@@ -300,7 +297,6 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/rounded_image_mask"
             android:clipToOutline="true"
             android:contentDescription="@string/recipe_image"
             android:scaleType="centerCrop"

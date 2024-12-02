@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#F875AA">
+    android:background="@color/c_f875aa">
 
     <LinearLayout
         android:id="@+id/registerContainer"
@@ -12,7 +12,6 @@
         android:layout_height="0dp"
         android:layout_margin="40dp"
         android:background="@drawable/rounded_white_box"
-        android:clipToOutline="true"
         android:elevation="4dp"
         android:orientation="vertical"
         android:padding="50dp"
@@ -29,49 +28,54 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="REGISTER"
-            android:textColor="#0072CE"
+            android:text="@string/register"
+            android:textColor="@color/c_075d92"
             android:textSize="32sp"
             android:textStyle="bold"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/registerTop"/>
 
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Enter Email Address"
+            android:hint="@string/enteremail"
             android:padding="10dp"
-            android:textColor="#000000"
-            android:textColorHint="#FFAFAF"
+            android:textColor="@color/c_ff5252"
+            android:textColorHint="@color/c_ff5252"
             android:textSize="20sp"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="24dp"
+            android:autofillHints="email"
+            android:inputType="textEmailAddress"/>
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Enter Password"
+            android:hint="@string/enterpassword"
             android:inputType="textPassword"
             android:padding="10dp"
-            android:textColor="#000000"
-            android:textColorHint="#FFAFAF"
+            android:textColor="@color/c_ff5252"
+            android:textColorHint="@color/c_ff5252"
             android:textSize="20sp"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="10dp"
+            android:autofillHints="password"/>
 
         <EditText
             android:id="@+id/confirmPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Confirm Password"
+            android:hint="@string/confirmpassword"
             android:inputType="textPassword"
             android:padding="10dp"
-            android:textColor="#000000"
-            android:textColorHint="#FFAFAF"
+            android:textColor="@color/c_ff5252"
+            android:textColorHint="@color/c_ff5252"
             android:textSize="20sp"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="10dp"
+            android:autofillHints="confirmpassword"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/registerButton"
@@ -80,12 +84,13 @@
             android:background="@drawable/button_bluestroke"
             android:elevation="2dp"
             android:padding="5dp"
-            android:text="REGISTER"
-            android:textColor="#088ADA"
+            android:text="@string/register"
+            android:textColor="@color/c_075d92"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="25dp"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/registerBottom"/>
 
     </LinearLayout>
 

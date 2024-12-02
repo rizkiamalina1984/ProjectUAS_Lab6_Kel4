@@ -48,7 +48,6 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/rounded_image_mask"
             android:clipToOutline="true"
             android:contentDescription="@string/recipe_image"
             android:scaleType="centerCrop"
@@ -143,11 +142,10 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/rounded_image_mask"
             android:clipToOutline="true"
             android:contentDescription="@string/recipe_image"
             android:scaleType="centerCrop"
-            android:src="@drawable/vegetable_kebab" />
+            android:src="@drawable/menu2" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -238,11 +236,10 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/rounded_image_mask"
             android:clipToOutline="true"
             android:contentDescription="@string/recipe_image"
             android:scaleType="centerCrop"
-            android:src="@drawable/smoothie_bowl" />
+            android:src="@drawable/menu3" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -333,11 +330,10 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/rounded_image_mask"
             android:clipToOutline="true"
             android:contentDescription="@string/recipe_image"
             android:scaleType="centerCrop"
-            android:src="@drawable/vege_mixed" />
+            android:src="@drawable/menu4" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -430,11 +426,10 @@ seasoning."
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_image_mask"
                     android:clipToOutline="true"
                     android:contentDescription="@string/recipe_image"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/vege_fried" />
+                    android:src="@drawable/menu5" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -527,7 +522,6 @@ peas, and corn"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_image_mask"
                     android:clipToOutline="true"
                     android:contentDescription="@string/recipe_image"
                     android:scaleType="centerCrop"
@@ -622,7 +616,6 @@ peas, and corn"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_image_mask"
                     android:clipToOutline="true"
                     android:contentDescription="@string/recipe_image"
                     android:scaleType="centerCrop"
@@ -719,11 +712,10 @@ vegetables."
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_image_mask"
                     android:clipToOutline="true"
                     android:contentDescription="@string/recipe_image"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/vege_burger" />
+                    android:src="@drawable/menu8" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -816,7 +808,6 @@ whole grain buns."
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_image_mask"
                     android:clipToOutline="true"
                     android:contentDescription="@string/recipe_image"
                     android:scaleType="centerCrop"
@@ -913,7 +904,6 @@ protein and fiber."
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_image_mask"
                     android:clipToOutline="true"
                     android:contentDescription="@string/recipe_image"
                     android:scaleType="centerCrop"
@@ -1011,11 +1001,10 @@ honey for sweetness."
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_image_mask"
                     android:clipToOutline="true"
                     android:contentDescription="@string/recipe_image"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/stir_broc" />
+                    android:src="@drawable/menu11" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -1108,7 +1097,6 @@ and colorful dish. "
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_image_mask"
                     android:clipToOutline="true"
                     android:contentDescription="@string/recipe_image"
                     android:scaleType="centerCrop"

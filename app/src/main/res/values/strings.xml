@@ -1,17 +1,121 @@
 <resources>
     <string name="app_name">ProjectUASLAB6</string>
-    <string name="_20_min">20 min</string>
-    <string name="read_more">Read More...</string>
-    <string name="a_delightful_blend_of_cooked_pasta_tossed_with_fresh_vegetables_and_diced_meat_creating_a_colorful_and_satisfying_dish_perfect_for_a_light_meal_or_side">A delightful blend of cooked pasta tossed with fresh vegetables and diced meat, creating a colorful and satisfying dish perfect for a light meal or side.</string>
-    <string name="recipe_image">Recipes\n</string>
-    <string name="a_refreshing_and_nutritious_blend_of_mixed_fruits_perfect_as_a_healthy_breakfast_or_snack">A refreshing and nutritious blend of mixed fruits. Perfect as a healthy breakfast or snack.</string>
-    <string name="grilled_skewers_of_fresh_vegetables_seasoned_with_herbs_and_spices_lightly_charred_on_the_outside_yet_tender_on_the_inside_these_kebabs_are_a_healthy_and_flavorful_option">Grilled skewers of fresh vegetables, seasoned with herbs and spices. Lightly charred on the outside yet tender on the inside, these kebabs are a healthy and flavorful option.</string>
-    <string name="golden_and_fluffy_pancakes_perfect_for_a_delicious_breakfast_or_brunch">Golden and fluffy pancakes, perfect for a delicious breakfast or brunch.</string>
-    <string name="read_more2">Read More...</string>
-    <string name="level_0">Level 0</string>
-    <string name="smoothie_bowl">Smoothie Bowl</string>
-    <string name="pasta_salad">Pasta Salad</string>
+
+    <string name="logoyum">LogoYumYum</string>
+
+    <string name="login">LOGIN</string>
+    <string name="enteremail">Enter Email Address</string>
+    <string name="enterpassword">Enter Password</string>
+    <string name="donthaveacc">Don\'t have an account?</string>
+    <string name="registernow">Register now</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="loginTop">Login Top</string>
+    <string name="loginBottom">Login Bottom</string>
+    <string name="register">REGISTER</string>
+    <string name="registerTop">Register Top</string>
+    <string name="registerBottom">Register Bottom</string>
+
+    <string name="recipes">Recipes</string>
+    <string name="popularpicks">Popular Picks</string>
+    <string name="recommendedforu">Recommended For You</string>
+    <string name="favreceipes">Favourite Recipes!</string>
     <string name="search">Search</string>
+
+    <string name="read_more">Read more</string>
+
+    <string name="menubtn">Menubtn</string>
+    <string name="searchbtn">Searchbtn</string>
+    <string name="favbtn">Favbtn</string>
+    <string name="lovebtn">Lovebtn</string>
+
+    <string name="min1">10 minutes</string>
+    <string name="min2">20 minutes</string>
+    <string name="min3">30 minutes</string>
+    <string name="min25">25 minutes</string>
+    <string name="min15">15 minutes</string>
+    <string name="min45">45 minutes</string>
+
+    <string name="lvl0">Level 0</string>
+    <string name="lvl1">Level 1</string>
+
+    <string name="menu1">Pasta Salad</string>
+    <string name="menu2">Vegetable Kebab</string>
+    <string name="menu3">Smoothie Bowl</string>
+    <string name="menu4">Stir-Fried Mixed Vegetables</string>
+    <string name="menu5">Vegetable Fried Rice</string>
+    <string name="menu6">Grilled Chicken Sandwich</string>
+    <string name="menu7">Rice Balls (Onigiri)</string>
+    <string name="menu8">Vegetable Burger</string>
+    <string name="menu9">Red Bean Soup</string>
+    <string name="menu10">Banana Pancakes</string>
+    <string name="menu11">Stir-Fried Broccoli and Tofu</string>
+    <string name="menu12">Fresh Fruit and Yogurt</string>
+
+    <string name="descmenu1">A delightful blend of cooked pasta tossed with fresh vegetables and diced meat, creating a colorful and...</string>
+    <string name="descmenu2">Grilled skewers of fresh vegetables, seasoned with herbs and spices. Lightly charred on the  outside yet...</string>
+    <string name="descmenu3">A frozen smoothie topped with fresh fruit, granola, and chia seeds, making it a refreshing and nutritious treat...</string>
+    <string name="descmenu4">Fresh vegetables like carrots, green beans, and corn stir-fried with light seasoning. A simple yet flavorful dish...</string>
+    <string name="descmenu5">A flavorful fried rice dish mixed with fresh vegetables like carrots, peas, and corn, making it both...</string>
+    <string name="descmenu6">Whole wheat bread filled with grilled chicken, lettuce, and tomato, offering a healthy and satisfying option for...</string>
+    <string name="descmenu7">Rice balls shaped into spheres or triangles, stuffed with tuna or vegetables, perfect for a fun and portable meal...</string>
+    <string name="descmenu8">A veggie patty burger with lettuce, tomato, and yogurt sauce, served in whole grain buns, providing a tasty and...</string>
+    <string name="descmenu9">A nutritious soup made from red beans and vegetables, rich in protein and fiber. Perfect for a warm and healthy lunch...</string>
+    <string name="descmenu10">Oatmeal pancakes made with mashed bananas, drizzled with honey for sweetness. A delicious and nutrient-packed...</string>
+    <string name="descmenu11">Stir-fried broccoli and tofu with simple spices, creating a healthy and colorful dish. Quick to prepare and full of vitamins...</string>
+    <string name="descmenu12">Fresh fruit slices served with yogurt for dipping, offering a refreshing snack. A tasty way to get essential...</string>
+
+    <string name="shortdescmenu1">A delightful blend of cooked pasta tossed with fresh vegetables and diced meat...</string>
+    <string name="shortdescmenu2">Grilled skewers of fresh vegetables, seasoned with herbs and spices. Lightly...</string>
+    <string name="shortdescmenu3">A frozen smoothie topped with fresh fruit, granola, and chia seeds, making it...</string>
+    <string name="shortdescmenu4">Fresh vegetables like carrots, green beans, and corn stir-fried with light...</string>
+    <string name="shortdescmenu5">A flavorful fried rice dish mixed with fresh vegetables like carrots, peas, and corn...</string>
+    <string name="shortdescmenu6">Whole wheat bread filled with grilled chicken, lettuce, and tomato, offering a healthy...</string>
+    <string name="shortdescmenu7">Rice balls shaped into spheres or triangles, stuffed with tuna or vegetables...</string>
+    <string name="shortdescmenu8">A veggie patty burger with lettuce, tomato, and yogurt sauce, served in whole grain...</string>
+    <string name="shortdescmenu9">A nutritious soup made from red beans and vegetables, rich in protein and fiber...</string>
+    <string name="shortdescmenu10">Oatmeal pancakes made with mashed bananas, drizzled with honey for sweetness...</string>
+    <string name="shortdescmenu11">Stir-fried broccoli and tofu with simple spices, creating a healthy and colorful dish...</string>
+    <string name="shortdescmenu12">Fresh fruit slices served with yogurt for dipping, offering a refreshing snack. A tasty...</string>
+
+    <string name="imagemenu1">Imagemenu1</string>
+    <string name="imagemenu2">Imagemenu2</string>
+    <string name="imagemenu3">Imagemenu3</string>
+    <string name="imagemenu4">Imagemenu4</string>
+    <string name="imagemenu5">Imagemenu5</string>
+    <string name="imagemenu6">Imagemenu6</string>
+    <string name="imagemenu7">Imagemenu7</string>
+    <string name="imagemenu8">Imagemenu8</string>
+    <string name="imagemenu9">Imagemenu9</string>
+    <string name="imagemenu10">Imagemenu10</string>
+    <string name="imagemenu11">Imagemenu11</string>
+    <string name="imagemenu12">Imagemenu12</string>
+
+    <string name="gambarmenu1">gambarmenu1</string>
+    <string name="gambarmenu2">gambarmenu2</string>
+    <string name="gambarmenu3">gambarmenu3</string>
+    <string name="gambarmenu4">gambarmenu4</string>
+    <string name="gambarmenu5">gambarmenu5</string>
+    <string name="gambarmenu6">gambarmenu6</string>
+    <string name="gambarmenu7">gambarmenu7</string>
+    <string name="gambarmenu8">gambarmenu8</string>
+    <string name="gambarmenu9">gambarmenu9</string>
+    <string name="gambarmenu10">gambarmenu10</string>
+    <string name="gambarmenu11">gambarmenu11</string>
+    <string name="gambarmenu12">gambarmenu12</string>
+
+    <string name="tombolmenu1">tombolmenu1</string>
+    <string name="tombolmenu2">tombolmenu2</string>
+    <string name="tombolmenu3">tombolmenu3</string>
+    <string name="tombolmenu4">tombolmenu4</string>
+    <string name="tombolmenu5">tombolmenu5</string>
+    <string name="tombolmenu6">tombolmenu6</string>
+    <string name="tombolmenu7">tombolmenu7</string>
+    <string name="tombolmenu8">tombolmenu8</string>
+    <string name="tombolmenu9">tombolmenu9</string>
+    <string name="tombolmenu10">tombolmenu10</string>
+    <string name="tombolmenu11">tombolmenu11</string>
+    <string name="tombolmenu12">tombolmenu12</string>
+
     <string name="rice">Rice</string>
     <string name="vegetables">Vegetables</string>
     <string name="bread">Bread</string>
@@ -19,18 +123,9 @@
     <string name="salad">Salad</string>
     <string name="meat">Meat</string>
     <string name="griddle_cakes">Griddle Cakes</string>
-    <string name="vegetables2">Vegetables</string>
-    <string name="vegetable_kebab">Vegetable Kebab</string>
-    <string name="_30_min">30 min</string>
-    <string name="a_frozen_smoothie_topped_with_fresh_fruit_granola_and_chia_seeds_making_it_a_refreshing_and_nutritious_treat">A frozen smoothie topped with fresh fruit, granola, and chia seeds, making it a refreshing and nutritious treat.</string>
-    <string name="_10_min">10 min</string>
-    <string name="food_name">Food Name</string>
-    <string name="food_description_goes_here">Food description goes here.</string>
-    <string name="tag1_tag2_tag3">Tag1 | Tag2 | Tag3</string>
-    <string name="left_arrow">left arrow</string>
-    <string name="Menu_Story">menu_story</string>
-    <string name="Ingredients_List">ingredients_list</string>
-    <string name="Instructions">instructions</string>
+
+    <string name="heythere">Hey there,</string>
+    <string name="readytomake">ready to make something delicious?</string>
 
     <string name="Frozen_Bananas">Frozen Bananas (solid) - 2 medium-sized</string>
     <string name="Frozen_Berries">Frozen Berries (solid) - 1 cup (e.g., strawberries, blueberries, or raspberries)</string>
@@ -39,4 +134,9 @@
     <string name="Granola">Granola (dry, crunchy) - 1/4 cup (for topping)</string>
     <string name="Fresh_Fruits">Fresh Fruits (solid) - 1/2 cup, sliced (e.g., kiwi, banana, or berries, for topping)</string>
     <string name="Chia_Seeds">Chia Seeds (dry, small) - 1 tablespoon(optional, for topping)</string>
+
+    <string name="left_arrow">left arrow</string>
+    <string name="Menu_Story">Menu Story</string>
+    <string name="Ingredients_List">Ingredients List</string>
+    <string name="Instructions">Instructions</string>
 </resources>

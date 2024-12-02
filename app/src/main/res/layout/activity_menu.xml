@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="@color/c_fff6f6">
 
-    <!-- Navbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
@@ -64,7 +63,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Deskripsi -->
             <TextView
                 android:id="@+id/descriptionTitle"
                 android:layout_width="match_parent"
@@ -85,7 +83,6 @@
                 android:textSize="14sp"
                 android:layout_marginBottom="16dp" />
 
-            <!-- Bahan-bahan -->
             <TextView
                 android:id="@+id/ingredientsTitle"
                 android:layout_width="match_parent"
@@ -96,14 +93,12 @@
                 android:textSize="20sp"
                 android:layout_marginBottom="8dp" />
 
-            <!-- RecyclerView untuk Bahan -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/ingredientsRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp" />
 
-            <!-- Cara Membuat -->
             <TextView
                 android:id="@+id/instructionsTitle"
                 android:layout_width="match_parent"

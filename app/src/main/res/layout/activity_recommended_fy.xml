@@ -1,58 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/c_fff6f6">
 
-    <!-- Main Content Container -->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         android:padding="16dp"
-        android:layout_above="@+id/bottomButtons">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
 
-        <!-- Title -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recommended For You"
-            android:textColor="#F875AA"
+            android:text="@string/recommendedforu"
+            android:textColor="@color/c_f875aa"
             android:textSize="24sp"
-            android:textStyle="italic|bold"
-            android:layout_marginBottom="1dp" />
+            android:textStyle="bold"/>
 
-        <!-- Scrollable Container for Cards -->
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
+            android:layout_height="548dp"
+            android:layout_marginTop="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Nineth Card -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="149dp"
-                    android:layout_margin="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/rounded_card_background"
                     android:elevation="4dp"
                     android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:padding="14dp">
 
                     <ImageView
                         android:id="@+id/recipeImage9"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:layout_marginEnd="10dp"
-                        android:background="@drawable/rounded_image_mask"
                         android:clipToOutline="true"
-                        android:contentDescription="@string/recipe_image"
+                        android:contentDescription="@string/imagemenu9"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/red_bean" />
+                        android:src="@drawable/menu9" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -64,7 +61,7 @@
                             android:id="@+id/recipeTitle9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Red Bean Soup"
+                            android:text="@string/menu9"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -73,24 +70,28 @@
                             android:id="@+id/recipeDescription9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="A nutritious soup made from red
-beans and vegetables, rich in
-protein and fiber."
+                            android:text="@string/descmenu9"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
 
-                        <TextView
-                            android:id="@+id/recipeReadMore9"
+                        <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/read_more2"
-                            android:textColor="#FF0000"
-                            android:textSize="14sp" />
+                            android:layout_marginStart="-25dp"
+                            android:layout_marginTop="-16dp"
+                            android:background="transparent"
+                            android:text="@string/read_more"
+                            android:textAllCaps="false"
+                            android:textColor="@color/c_ff0000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="-10dp"
                             android:orientation="horizontal">
 
                             <TextView
@@ -100,11 +101,12 @@ protein and fiber."
                                 android:layout_marginEnd="8dp"
                                 android:background="@drawable/time_button_background"
                                 android:drawableStart="@drawable/time_icon_scaled"
-                                android:drawablePadding="4dp"
-                                android:padding="4dp"
-                                android:text="45 min"
+                                android:drawablePadding="3dp"
+                                android:padding="5dp"
+                                android:text="@string/min45"
                                 android:textColor="@android:color/white"
-                                android:textSize="12sp" />
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/recipeLevel9"
@@ -112,44 +114,46 @@ protein and fiber."
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/level_button_background"
                                 android:drawablePadding="4dp"
-                                android:padding="4dp"
-                                android:text="@string/level_0"
+                                android:padding="5dp"
+                                android:text="@string/lvl1"
                                 android:textColor="@android:color/white"
                                 android:textSize="12sp"
+                                android:textStyle="bold"
                                 app:drawableStartCompat="@drawable/spicy_icon_scaled" />
 
                             <ImageView
                                 android:id="@+id/favoriteIcon9"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:layout_marginStart="16dp"
-                                android:contentDescription="@string/favorite_icon4"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="4dp"
+                                android:contentDescription="@string/lovebtn"
                                 android:src="@drawable/favorite_icon" />
 
                         </LinearLayout>
+
                     </LinearLayout>
+
                 </LinearLayout>
 
-                <!-- Tenth Card -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="149dp"
-                    android:layout_margin="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/rounded_card_background"
                     android:elevation="4dp"
                     android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:padding="14dp">
 
                     <ImageView
                         android:id="@+id/recipeImage10"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:layout_marginEnd="10dp"
-                        android:background="@drawable/rounded_image_mask"
                         android:clipToOutline="true"
-                        android:contentDescription="@string/recipe_image"
+                        android:contentDescription="@string/imagemenu10"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/banana_pan" />
+                        android:src="@drawable/menu10" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -161,7 +165,7 @@ protein and fiber."
                             android:id="@+id/recipeTitle10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Banana Pancake"
+                            android:text="@string/menu10"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -170,24 +174,28 @@ protein and fiber."
                             android:id="@+id/recipeDescription10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Oatmeal pancakes made with
-mashed bananas, drizzled with
-honey for sweetness."
+                            android:text="@string/descmenu10"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
 
-                        <TextView
-                            android:id="@+id/recipeReadMore10"
+                        <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/read_more2"
-                            android:textColor="#FF0000"
-                            android:textSize="14sp" />
+                            android:layout_marginStart="-25dp"
+                            android:layout_marginTop="-16dp"
+                            android:background="transparent"
+                            android:text="@string/read_more"
+                            android:textAllCaps="false"
+                            android:textColor="@color/c_ff0000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="-10dp"
                             android:orientation="horizontal">
 
                             <TextView
@@ -197,11 +205,12 @@ honey for sweetness."
                                 android:layout_marginEnd="8dp"
                                 android:background="@drawable/time_button_background"
                                 android:drawableStart="@drawable/time_icon_scaled"
-                                android:drawablePadding="4dp"
-                                android:padding="4dp"
-                                android:text="15 min"
+                                android:drawablePadding="3dp"
+                                android:padding="5dp"
+                                android:text="@string/min15"
                                 android:textColor="@android:color/white"
-                                android:textSize="12sp" />
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/recipeLevel10"
@@ -209,45 +218,46 @@ honey for sweetness."
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/level_button_background"
                                 android:drawablePadding="4dp"
-                                android:padding="4dp"
-                                android:text="@string/level_0"
+                                android:padding="5dp"
+                                android:text="@string/lvl0"
                                 android:textColor="@android:color/white"
                                 android:textSize="12sp"
+                                android:textStyle="bold"
                                 app:drawableStartCompat="@drawable/spicy_icon_scaled" />
 
                             <ImageView
                                 android:id="@+id/favoriteIcon10"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:layout_marginStart="16dp"
-                                android:contentDescription="@string/favorite_icon4"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="4dp"
+                                android:contentDescription="@string/lovebtn"
                                 android:src="@drawable/favorite_icon" />
 
                         </LinearLayout>
+
                     </LinearLayout>
+
                 </LinearLayout>
 
-                <!-- Eleventh Card -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="149dp"
-                    android:layout_margin="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/rounded_card_background"
                     android:elevation="4dp"
                     android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:padding="14dp">
 
                     <ImageView
-                        android:id="@+id/recipeImage11
-"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:id="@+id/recipeImage11"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:layout_marginEnd="10dp"
-                        android:background="@drawable/rounded_image_mask"
                         android:clipToOutline="true"
-                        android:contentDescription="@string/recipe_image"
+                        android:contentDescription="@string/imagemenu11"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/stir_broc" />
+                        android:src="@drawable/menu11" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -259,7 +269,7 @@ honey for sweetness."
                             android:id="@+id/recipeTitle11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Stir-fried Broccoli and Tofu"
+                            android:text="@string/menu11"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -268,24 +278,28 @@ honey for sweetness."
                             android:id="@+id/recipeDescription11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Stir-fried broccoli and tofu with
-simple spices, creating a healthy
-and colorful dish. "
+                            android:text="@string/descmenu11"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
 
-                        <TextView
-                            android:id="@+id/recipeReadMore11"
+                        <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/read_more2"
-                            android:textColor="#FF0000"
-                            android:textSize="14sp" />
+                            android:layout_marginStart="-25dp"
+                            android:layout_marginTop="-16dp"
+                            android:background="transparent"
+                            android:text="@string/read_more"
+                            android:textAllCaps="false"
+                            android:textColor="@color/c_ff0000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="-10dp"
                             android:orientation="horizontal">
 
                             <TextView
@@ -295,11 +309,12 @@ and colorful dish. "
                                 android:layout_marginEnd="8dp"
                                 android:background="@drawable/time_button_background"
                                 android:drawableStart="@drawable/time_icon_scaled"
-                                android:drawablePadding="4dp"
-                                android:padding="4dp"
-                                android:text="@string/_20_min"
+                                android:drawablePadding="3dp"
+                                android:padding="5dp"
+                                android:text="@string/min2"
                                 android:textColor="@android:color/white"
-                                android:textSize="12sp" />
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/recipeLevel11"
@@ -307,44 +322,46 @@ and colorful dish. "
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/level_button_background"
                                 android:drawablePadding="4dp"
-                                android:padding="4dp"
-                                android:text="Level 1"
+                                android:padding="5dp"
+                                android:text="@string/lvl1"
                                 android:textColor="@android:color/white"
                                 android:textSize="12sp"
+                                android:textStyle="bold"
                                 app:drawableStartCompat="@drawable/spicy_icon_scaled" />
 
                             <ImageView
                                 android:id="@+id/favoriteIcon11"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:layout_marginStart="16dp"
-                                android:contentDescription="@string/favorite_icon4"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="4dp"
+                                android:contentDescription="@string/lovebtn"
                                 android:src="@drawable/favorite_icon" />
 
                         </LinearLayout>
+
                     </LinearLayout>
+
                 </LinearLayout>
 
-                <!-- Twelve Card -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="149dp"
-                    android:layout_margin="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/rounded_card_background"
                     android:elevation="4dp"
                     android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:padding="14dp">
 
                     <ImageView
                         android:id="@+id/recipeImage12"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:layout_marginEnd="10dp"
-                        android:background="@drawable/rounded_image_mask"
                         android:clipToOutline="true"
-                        android:contentDescription="@string/recipe_image"
+                        android:contentDescription="@string/imagemenu11"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/fresh_fruit" />
+                        android:src="@drawable/menu12" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -356,7 +373,7 @@ and colorful dish. "
                             android:id="@+id/recipeTitle12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Fresh Fruit and Yogurt"
+                            android:text="@string/menu12"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -365,24 +382,28 @@ and colorful dish. "
                             android:id="@+id/recipeDescription12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Fresh fruit slices served with yogurt
-for dipping, offering a refreshing
-snack."
+                            android:text="@string/descmenu12"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
 
-                        <TextView
-                            android:id="@+id/recipeReadMore12"
+                        <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/read_more2"
-                            android:textColor="#FF0000"
-                            android:textSize="14sp" />
+                            android:layout_marginStart="-25dp"
+                            android:layout_marginTop="-16dp"
+                            android:background="transparent"
+                            android:text="@string/read_more"
+                            android:textAllCaps="false"
+                            android:textColor="@color/c_ff0000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="-10dp"
                             android:orientation="horizontal">
 
                             <TextView
@@ -392,11 +413,12 @@ snack."
                                 android:layout_marginEnd="8dp"
                                 android:background="@drawable/time_button_background"
                                 android:drawableStart="@drawable/time_icon_scaled"
-                                android:drawablePadding="4dp"
-                                android:padding="4dp"
-                                android:text="@string/_20_min"
+                                android:drawablePadding="3dp"
+                                android:padding="5dp"
+                                android:text="@string/min1"
                                 android:textColor="@android:color/white"
-                                android:textSize="12sp" />
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/recipeLevel12"
@@ -404,37 +426,45 @@ snack."
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/level_button_background"
                                 android:drawablePadding="4dp"
-                                android:padding="4dp"
-                                android:text="@string/level_0"
+                                android:padding="5dp"
+                                android:text="@string/lvl1"
                                 android:textColor="@android:color/white"
                                 android:textSize="12sp"
+                                android:textStyle="bold"
                                 app:drawableStartCompat="@drawable/spicy_icon_scaled" />
 
                             <ImageView
                                 android:id="@+id/favoriteIcon12"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:layout_marginStart="16dp"
-                                android:contentDescription="@string/favorite_icon4"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginTop="4dp"
+                                android:contentDescription="@string/lovebtn"
                                 android:src="@drawable/favorite_icon" />
 
                         </LinearLayout>
+
                     </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
+
         </ScrollView>
+
     </LinearLayout>
 
-    <!-- Bottom Navigation Bar, pinned to the bottom of the screen -->
     <LinearLayout
         android:id="@+id/bottomButtons"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#FFEBEE"
         android:gravity="center"
-        android:layout_alignParentBottom="true">
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
 
         <ImageButton
             android:id="@+id/buttonmenu"
@@ -442,8 +472,10 @@ snack."
             android:layout_height="110dp"
             android:layout_weight="1"
             android:src="@drawable/menu"
-            android:background="@drawable/button_3tap"
-            android:scaleType="centerInside" />
+            android:background="@drawable/buttonblue_3tap"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/menubtn"/>
 
         <ImageButton
             android:id="@+id/buttonsearch"
@@ -452,7 +484,9 @@ snack."
             android:layout_weight="1"
             android:src="@drawable/search"
             android:background="@drawable/button_3tap"
-            android:scaleType="centerInside" />
+            android:scaleType="centerInside"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/searchbtn"/>
 
         <ImageButton
             android:id="@+id/buttonfav"
@@ -461,6 +495,12 @@ snack."
             android:layout_weight="1"
             android:src="@drawable/fav"
             android:background="@drawable/button_3tap"
-            android:scaleType="centerInside" />
+            android:scaleType="centerInside"
+            android:contentDescription="@string/favbtn"/>
+
     </LinearLayout>
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
