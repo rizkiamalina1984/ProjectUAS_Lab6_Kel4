@@ -139,4 +139,10 @@
     <string name="Menu_Story">Menu Story</string>
     <string name="Ingredients_List">Ingredients List</string>
     <string name="Instructions">Instructions</string>
+
+    <string name="sample_text_desc">Sample Text Description</string>
+    <string name="sample_text_ins">Sample Text Instruction</string>
+    <string name="ingredient_name">Ingredient Name</string>
+    <string name="ingredient_image">Ingredient Image</string>
+
 </resources>

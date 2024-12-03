@@ -6,6 +6,7 @@
     android:padding="16dp"
     android:layout_marginBottom="8dp">
 
+    <!-- Item 1 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,165 +14,23 @@
         android:layout_marginBottom="16dp">
 
         <ImageView
-            android:id="@+id/ingredientImage1"
+            android:id="@+id/ingredientImage"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginEnd="16dp"
-            android:src="@drawable/ingredient1_menu_1"
-            android:contentDescription="Ingredient Image" />
+            android:contentDescription="@string/ingredient_image"
+            android:src="@drawable/red80dp_blank" />
 
         <TextView
-            android:id="@+id/ingredientText1"
+            android:id="@+id/ingredientText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Frozen_Bananas"
+            android:text="@string/ingredient_name"
             android:textSize="14sp"
             android:textColor="#000000"
             android:textStyle="bold"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
-
-        <ImageView
-            android:id="@+id/ingredientImage2"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ingredient2_menu_1"
-            android:contentDescription="Ingredient Image" />
-
-        <TextView
-            android:id="@+id/ingredientText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Frozen_Berries"
-            android:textSize="14sp"
-            android:textColor="#000000"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
-
-        <ImageView
-            android:id="@+id/ingredientImage3"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ingredient3_menu_1"
-            android:contentDescription="Ingredient Image" />
-
-        <TextView
-            android:id="@+id/ingredientText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Greek_Yogurt"
-            android:textSize="14sp"
-            android:textColor="#000000"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
-
-        <ImageView
-            android:id="@+id/ingredientImage4"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ingredient4_menu_1"
-            android:contentDescription="Ingredient Image" />
-
-        <TextView
-            android:id="@+id/ingredientText4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Almond_Milk"
-            android:textSize="14sp"
-            android:textColor="#000000"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
-
-        <ImageView
-            android:id="@+id/ingredientImage5"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ingredient5_menu_1"
-            android:contentDescription="Ingredient Image" />
-
-        <TextView
-            android:id="@+id/ingredientText5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Granola"
-            android:textSize="14sp"
-            android:textColor="#000000"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
-
-        <ImageView
-            android:id="@+id/ingredientImage6"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ingredient6_menu_1"
-            android:contentDescription="Ingredient Image" />
-
-        <TextView
-            android:id="@+id/ingredientText6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Fresh_Fruits"
-            android:textSize="14sp"
-            android:textColor="#000000"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
-
-        <ImageView
-            android:id="@+id/ingredientImage7"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ingredient7_menu_1"
-            android:contentDescription="Ingredient Image" />
-
-        <TextView
-            android:id="@+id/ingredientText7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Chia_Seeds"
-            android:textSize="14sp"
-            android:textColor="#000000"
-            android:textStyle="bold"/>
-    </LinearLayout>
+    <!--seterusnya-->
 
 </LinearLayout>
