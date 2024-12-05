@@ -1,244 +1,251 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/search"
-    android:background="@color/c_f875aa">
+    tools:context=".SearchActivity">
 
-    <TextView
-        android:id="@+id/search_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/search"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:textColor="@color/c_ffffff"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
-
-    <LinearLayout
-        android:id="@+id/item_list"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/rounded_bgmenu"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/search_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp">
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/search_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-            <ImageView
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:src="@drawable/search_icon"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/rice"
-                android:paddingStart="-24dp"
-                android:background="transparent"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/c_f875aa" />
-        </LinearLayout>
+            android:text="@string/search"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/c_ffffff"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-            <ImageView
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:src="@drawable/search_icon"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/vegetables"
-                android:paddingStart="-2dp"
-                android:background="transparent"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/c_f875aa" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-            <ImageView
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:src="@drawable/search_icon"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/bread"
-                android:paddingStart="-12dp"
-                android:background="transparent"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/c_f875aa" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-            <ImageView
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:src="@drawable/search_icon"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/soup"
-                android:paddingStart="-16dp"
-                android:background="transparent"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/c_f875aa" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-            <ImageView
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:src="@drawable/search_icon"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salad"
-                android:paddingStart="-14dp"
-                android:background="transparent"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/c_f875aa" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-            <ImageView
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:src="@drawable/search_icon"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/meat"
-                android:paddingStart="-20dp"
-                android:background="transparent"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/c_f875aa" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="8dp">
-
-            <ImageView
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:src="@drawable/search_icon"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/griddle_cakes"
-                android:paddingStart="-2dp"
-                android:background="transparent"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/c_f875aa" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/bottomButtons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
-        <ImageButton
-            android:id="@+id/buttonmenu"
+            android:id="@+id/item_list"
             android:layout_width="0dp"
-            android:layout_height="110dp"
-            android:layout_weight="1"
-            android:src="@drawable/menu"
-            android:background="@drawable/button_3tap"
-            android:scaleType="centerInside"
-            android:layout_marginEnd="8dp"
-            android:contentDescription="@string/menubtn"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_bgmenu"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/search_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp">
 
-        <ImageButton
-            android:id="@+id/buttonsearch"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/search_icon"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/search_rice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:paddingStart="-24dp"
+                    android:text="@string/rice"
+                    android:textColor="@color/c_f875aa"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/search_icon"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/search_vegetables"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vegetables"
+                    android:paddingStart="-2dp"
+                    android:background="@color/transparent"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/c_f875aa" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/search_icon"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/search_bread"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bread"
+                    android:paddingStart="-12dp"
+                    android:background="@color/transparent"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/c_f875aa" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/search_icon"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/search_soup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/soup"
+                    android:paddingStart="-16dp"
+                    android:background="@color/transparent"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/c_f875aa" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/search_icon"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/search_salad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/salad"
+                    android:paddingStart="-14dp"
+                    android:background="@color/transparent"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/c_f875aa" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/search_icon"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/search_meat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/meat"
+                    android:paddingStart="-20dp"
+                    android:background="@color/transparent"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/c_f875aa" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/search_icon"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/search_griddle_cakes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/griddle_cakes"
+                    android:paddingStart="-2dp"
+                    android:background="@color/transparent"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/c_f875aa" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomButtons"
             android:layout_width="0dp"
-            android:layout_height="110dp"
-            android:layout_weight="1"
-            android:src="@drawable/search"
-            android:background="@drawable/buttonblue_3tap"
-            android:scaleType="centerInside"
-            android:layout_marginEnd="8dp"
-            android:contentDescription="@string/searchbtn"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
 
-        <ImageButton
-            android:id="@+id/buttonfav"
-            android:layout_width="0dp"
-            android:layout_height="110dp"
-            android:layout_weight="1"
-            android:src="@drawable/fav"
-            android:background="@drawable/button_3tap"
-            android:scaleType="centerInside"
-            android:contentDescription="@string/favbtn"/>
+            <ImageButton
+                android:id="@+id/buttonmenu"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:src="@drawable/menu"
+                android:background="@drawable/button_3tap"
+                android:scaleType="centerInside"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/menubtn"/>
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/buttonsearch"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:src="@drawable/search"
+                android:background="@drawable/buttonblue_3tap"
+                android:scaleType="centerInside"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/searchbtn"/>
 
+            <ImageButton
+                android:id="@+id/buttonfav"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:src="@drawable/fav"
+                android:background="@drawable/button_3tap"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/favbtn"/>
+
+        </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,12 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/menu"
-    android:background="@color/c_fff6f6">
+    android:background="@color/c_fff6f6"
+    tools:context=".MenuActivity">
 
     <!-- Navbar -->
     <androidx.appcompat.widget.Toolbar
@@ -66,18 +68,19 @@
             android:padding="16dp">
 
             <!-- Deskripsi -->
-            <TextView
-                android:id="@+id/descriptionTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Menu_Story"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:layout_marginBottom="2dp" />
 
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/menuNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="@string/Menu_Story"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/menuDescriptionTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sample_text_desc"
@@ -87,24 +90,27 @@
                 android:layout_marginBottom="16dp" />
 
             <!-- Bahan-bahan -->
+
+            <!-- RecyclerView untuk Bahan -->
+
+            <!-- Cara Membuat -->
+
             <TextView
                 android:id="@+id/ingredientsTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="@string/Ingredients_List"
-                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:layout_marginBottom="8dp" />
+                android:textStyle="bold" />
 
-            <!-- RecyclerView untuk Bahan -->
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/ingredientsRecyclerView"
+                android:id="@+id/menuToolsRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp" />
 
-            <!-- Cara Membuat -->
             <TextView
                 android:id="@+id/instructionsTitle"
                 android:layout_width="match_parent"
@@ -116,7 +122,7 @@
                 android:layout_marginBottom="2dp" />
 
             <TextView
-                android:id="@+id/instructions"
+                android:id="@+id/menuIngredientsTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sample_text_ins"

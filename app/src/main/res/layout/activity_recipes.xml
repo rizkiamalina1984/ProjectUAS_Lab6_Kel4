@@ -77,11 +77,12 @@
                             android:textSize="14sp" />
 
                         <Button
+                            android:id="@+id/readMoreButton1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="-25dp"
                             android:layout_marginTop="-16dp"
-                            android:background="transparent"
+                            android:background="@color/transparent"
                             android:text="@string/read_more"
                             android:textAllCaps="false"
                             android:textColor="@color/c_ff0000"
@@ -181,11 +182,12 @@
                             android:textSize="14sp" />
 
                         <Button
+                            android:id="@+id/readMoreButton2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="-25dp"
                             android:layout_marginTop="-16dp"
-                            android:background="transparent"
+                            android:background="@color/transparent"
                             android:text="@string/read_more"
                             android:textAllCaps="false"
                             android:textColor="@color/c_ff0000"
@@ -285,11 +287,12 @@
                             android:textSize="14sp" />
 
                         <Button
+                            android:id="@+id/readMoreButton3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="-25dp"
                             android:layout_marginTop="-16dp"
-                            android:background="transparent"
+                            android:background="@color/transparent"
                             android:text="@string/read_more"
                             android:textAllCaps="false"
                             android:textColor="@color/c_ff0000"
@@ -389,11 +392,12 @@
                             android:textSize="14sp" />
 
                         <Button
+                            android:id="@+id/readMoreButton4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="-25dp"
                             android:layout_marginTop="-16dp"
-                            android:background="transparent"
+                            android:background="@color/transparent"
                             android:text="@string/read_more"
                             android:textAllCaps="false"
                             android:textColor="@color/c_ff0000"
@@ -493,11 +497,12 @@
                             android:textSize="14sp" />
 
                         <Button
+                            android:id="@+id/readMoreButton5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="-25dp"
                             android:layout_marginTop="-16dp"
-                            android:background="transparent"
+                            android:background="@color/transparent"
                             android:text="@string/read_more"
                             android:textAllCaps="false"
                             android:textColor="@color/c_ff0000"
@@ -597,11 +602,12 @@
                             android:textSize="14sp" />
 
                         <Button
+                            android:id="@+id/readMoreButton6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="-25dp"
                             android:layout_marginTop="-16dp"
-                            android:background="transparent"
+                            android:background="@color/transparent"
                             android:text="@string/read_more"
                             android:textAllCaps="false"
                             android:textColor="@color/c_ff0000"
@@ -701,11 +707,12 @@
                             android:textSize="14sp" />
 
                         <Button
+                            android:id="@+id/readMoreButton7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="-25dp"
                             android:layout_marginTop="-16dp"
-                            android:background="transparent"
+                            android:background="@color/transparent"
                             android:text="@string/read_more"
                             android:textAllCaps="false"
                             android:textColor="@color/c_ff0000"
@@ -805,11 +812,12 @@
                             android:textSize="14sp" />
 
                         <Button
+                            android:id="@+id/readMoreButton8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="-25dp"
                             android:layout_marginTop="-16dp"
-                            android:background="transparent"
+                            android:background="@color/transparent"
                             android:text="@string/read_more"
                             android:textAllCaps="false"
                             android:textColor="@color/c_ff0000"
@@ -909,11 +917,12 @@
                             android:textSize="14sp" />
 
                         <Button
+                            android:id="@+id/readMoreButton9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="-25dp"
                             android:layout_marginTop="-16dp"
-                            android:background="transparent"
+                            android:background="@color/transparent"
                             android:text="@string/read_more"
                             android:textAllCaps="false"
                             android:textColor="@color/c_ff0000"
@@ -1013,11 +1022,12 @@
                             android:textSize="14sp" />
 
                         <Button
+                            android:id="@+id/readMoreButton10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="-25dp"
                             android:layout_marginTop="-16dp"
-                            android:background="transparent"
+                            android:background="@color/transparent"
                             android:text="@string/read_more"
                             android:textAllCaps="false"
                             android:textColor="@color/c_ff0000"
@@ -1117,11 +1127,12 @@
                             android:textSize="14sp" />
 
                         <Button
+                            android:id="@+id/readMoreButton11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="-25dp"
                             android:layout_marginTop="-16dp"
-                            android:background="transparent"
+                            android:background="@color/transparent"
                             android:text="@string/read_more"
                             android:textAllCaps="false"
                             android:textColor="@color/c_ff0000"
@@ -1221,11 +1232,12 @@
                             android:textSize="14sp" />
 
                         <Button
+                            android:id="@+id/readMoreButton12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="-25dp"
                             android:layout_marginTop="-16dp"
-                            android:background="transparent"
+                            android:background="@color/transparent"
                             android:text="@string/read_more"
                             android:textAllCaps="false"
                             android:textColor="@color/c_ff0000"
